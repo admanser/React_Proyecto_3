@@ -3,6 +3,7 @@ import Advertising from './Advertising';
 import Category from "./Category";
 import Hero from "./Hero";
 import ListFilms from "./ListFilms";
+import NextPremieres from './NextPremieres';
 
 
 const Landing = () => {
@@ -12,6 +13,7 @@ const Landing = () => {
       <ListFilms />
       <Advertising />
       <Category />
+      <NextPremieres />
  </>
   )
 }
