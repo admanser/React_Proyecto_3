@@ -7,7 +7,7 @@ const Footer = () => {
   return (
   <Container fluid className="m-0 p-0" >
     <Row className="d-flex" style={{ backgroundColor: "#FAA916" }}>
-      <Col className="d-flex justify-content-center align-items-center"><img src="https://trello.com/1/cards/6369ac671b9582011c590418/attachments/6372a44304ff6d018d083864/download/Negro_Blanco_Iconos_Moderno_Festival_de_Cine_Evento_Logotipo_(6).png" width={150}/></Col>
+      <Col className="d-flex justify-content-center align-items-center"><img src="https://trello.com/1/cards/6369ac671b9582011c590418/attachments/6372a44304ff6d018d083864/download/Negro_Blanco_Iconos_Moderno_Festival_de_Cine_Evento_Logotipo_(6).png" alt="Logo" width={150}/></Col>
       <Col>
         <Row className=" g-3 mt-3">
           <a className="" href="">link1</a>
