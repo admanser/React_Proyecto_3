@@ -1,6 +1,5 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-
 import { Row, Col, Container } from "react-bootstrap";
 
 const Footer = () => {
@@ -8,7 +7,7 @@ const Footer = () => {
     <Container fluid className="m-0">
       <Row className="d-flex" style={{ backgroundColor: "#FAA916" }}>
         <Col className="d-flex justify-content-center align-items-center">
-          <img src="/img/logo.png" alt="logo.png" width={130} />
+          <img src="/img/icons/logo.png" alt="logo.png" width={110} />
         </Col>
         <Col>
           <Row className=" g-3 mt-3">
@@ -33,40 +32,40 @@ const Footer = () => {
         <Col>
           <div className="d-flex mt-5">
             <h3 className="col">
-              <NavLink>
+              <a href="https://facebook.com">
                 <img
                   src="/img/icons/facebook.png"
                   alt="Icono Facebook"
                   width={45}
                 />
-              </NavLink>
+              </a>
             </h3>
             <h3 className="col">
-              <NavLink>
+              <a href="https://instagram.com">
                 <img
                   src="/img/icons/instagram.png"
                   alt="Icono Instagram"
                   width={45}
                 />
-              </NavLink>
+              </a>
             </h3>
             <h3 className="col">
-              <NavLink>
+              <a href="https://twitter.com">
                 <img
                   src="/img/icons/twitter.png"
                   alt="Icono Twitter"
                   width={45}
                 />
-              </NavLink>
+              </a>
             </h3>
             <h3 className="col">
-              <NavLink>
+              <a href="https://youtube.com">
                 <img
                   src="/img/icons/youtube.png"
                   alt="Icono Youtube"
                   width={45}
                 />
-              </NavLink>
+              </a>
             </h3>
           </div>
         </Col>
