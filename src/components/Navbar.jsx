@@ -8,18 +8,19 @@ const Navbar1 = () => {
   };
   return (
     <Navbar
+      id="nav"
       expand="lg"
       style={{ backgroundColor: "#FAA916" }}
-      className="fixed-top"
+      className="fixed-top col-12"
     >
-      <Container fluid>
+      <Container fluid className="col-9">
         <NavLink className="me-3" to="/">
           <img src="/img/icons/logo.png" alt="logo.png" width={50} />
         </NavLink>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav className="me-auto my-2 my-lg-0">
-            <Form className="d-flex">
+            <Form className="d-flex h-25 pt-2">
               <Form.Control
                 type="search"
                 placeholder="Ingrese su búsqueda"
@@ -28,24 +29,28 @@ const Navbar1 = () => {
               />
               <Button variant="outline-dark">buscar</Button>
             </Form>
-            <Nav.Link href="#action1">Registrarse</Nav.Link>
-            <Nav.Link href="#action2">Ingresar</Nav.Link>
+            <Nav.Link href="#action1" className="mt-1">
+              Registrarse
+            </Nav.Link>
+            <Nav.Link href="#action2" className="mt-1">
+              Ingresar
+            </Nav.Link>
 
             <NavLink
-              className="nav-link"
+              className="nav-link mt-1"
               to="/Contact"
               style={({ isActive }) => (isActive ? activeStyle : undefined)}
             >
               Contacto
             </NavLink>
             <NavLink
-              className="nav-link"
+              className="nav-link mt-1 me-4"
               to="/Favorites"
               style={({ isActive }) => (isActive ? activeStyle : undefined)}
             >
               Favoritos
             </NavLink>
-            {/* <Container fluid className="justify-content-end"> */}
+
             <div className="row">
               <h3 className="col">
                 {" "}
@@ -88,7 +93,6 @@ const Navbar1 = () => {
                 </a>
               </h3>
             </div>
-            {/* </Container> */}
           </Nav>
         </Navbar.Collapse>
       </Container>
