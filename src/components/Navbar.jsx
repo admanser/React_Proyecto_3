@@ -14,7 +14,7 @@ const Navbar1 = () => {
     >
       <Container fluid>
         <NavLink className="me-3" to="/">
-          <img src="/img/logo.png" alt="logo.png" width={45} />
+          <img src="/img/icons/logo.png" alt="logo.png" width={50} />
         </NavLink>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
@@ -49,43 +49,43 @@ const Navbar1 = () => {
             <div className="row">
               <h3 className="col">
                 {" "}
-                <NavLink>
+                <a href="https://facebook.com">
                   <img
                     src="/img/icons/facebook.png"
                     alt="Icono Facebook"
                     width={45}
                   />
-                </NavLink>
+                </a>
               </h3>
               <h3 className="col">
                 {" "}
-                <NavLink>
+                <a href="https://instagram.com">
                   <img
                     src="/img/icons/instagram.png"
                     alt="Icono Instagram"
                     width={45}
                   />
-                </NavLink>
+                </a>
               </h3>
               <h3 className="col">
                 {" "}
-                <NavLink>
+                <a href="https://twitter.com">
                   <img
                     src="/img/icons/twitter.png"
                     alt="Icono Twitter"
                     width={45}
                   />
-                </NavLink>
+                </a>
               </h3>
               <h3 className="col">
                 {" "}
-                <NavLink>
+                <a href="https://youtube.com">
                   <img
                     src="/img/icons/youtube.png"
                     alt="Icono Youtube"
                     width={45}
                   />
-                </NavLink>
+                </a>
               </h3>
             </div>
             {/* </Container> */}

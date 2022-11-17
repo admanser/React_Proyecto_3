@@ -2,7 +2,7 @@ import React from 'react';
 import Advertising from '../components/Advertising';
 import Category from "../components/Category";
 import Hero from "../components/Hero";
-import ListFilms from "../components/ListFilms";
+import ListMoviesContainer from "../components/ListMoviesContainer";
 import NextPremieres from '../components/NextPremieres';
 
 
@@ -10,7 +10,7 @@ const Landing = () => {
   return (
     <>
       <Hero />
-      <ListFilms />
+      <ListMoviesContainer />
       <Advertising />
       <Category />
       <NextPremieres />
