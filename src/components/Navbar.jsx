@@ -30,6 +30,7 @@ const Navbar1 = () => {
             </Form>
             <Nav.Link href="#action1">Registrarse</Nav.Link>
             <Nav.Link href="#action2">Ingresar</Nav.Link>
+
             <NavLink
               className="nav-link"
               to="/Contact"
@@ -44,6 +45,7 @@ const Navbar1 = () => {
             >
               Favoritos
             </NavLink>
+            {/* <Container fluid className="justify-content-end"> */}
             <div className="row">
               <h3 className="col">
                 {" "}
@@ -86,6 +88,7 @@ const Navbar1 = () => {
                 </NavLink>
               </h3>
             </div>
+            {/* </Container> */}
           </Nav>
         </Navbar.Collapse>
       </Container>
