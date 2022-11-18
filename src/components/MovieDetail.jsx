@@ -3,15 +3,15 @@ import { Row, Container, Col } from 'react-bootstrap';
 import Ratio from 'react-bootstrap/Ratio';
 import NextPremieres from './NextPremieres';
 
-const MovieDetail = () => {
+const MovieDetail = ({data}) => {
   return (
     <Container>
-        <h2 className='mt-2'>Nombre Pelicula</h2>
+        <h2 className='mt-2'>{data.title}</h2>
         <hr></hr>
         <Row>
           <div className="width-col">
               <Col  className="d-flex justify-content-start">
-                <img src="./img/premiere1.jpg"></img></Col>
+                <img src={data.image}></img></Col>
               <Col>
                 <div className='d-block justify-content-start mt-2'>
                   <p>Categoría:</p>
@@ -29,7 +29,7 @@ const MovieDetail = () => {
         </Row>
         <h4 className='mt-5'>Argumento</h4>
         <hr></hr>
-        <p className="mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium possimus temporibus suscipit odit! Error veritatis, minus voluptatem possimus maiores soluta quis, voluptate minima itaque delectus expedita deserunt atque quidem fuga quasi iste nemo numquam ratione accusamus ut asperiores provident maxime nesciunt hic? Perspiciatis a in officiis tempora adipisci molestiae nesciunt.</p>
+        <p className="mb-5">{data.description}</p>
         <NextPremieres />
     </Container>
   );

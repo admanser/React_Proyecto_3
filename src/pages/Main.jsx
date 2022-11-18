@@ -6,7 +6,6 @@ import Landing from "./Landing";
 import NotFound from "./NotFound";
 import Footer from "../components/Footer";
 import RecupPass from "./RecupPass";
-import PageProduct from "./PageProduct";
 import Contact from "./Contact";
 import Favorites from "./Favorites";
 
@@ -18,7 +17,6 @@ const Main = () => {
         <Routes>
           <Route path="/" element={<Landing />}/>
           <Route path="/recupPass" element={<RecupPass />}/>
-          <Route path="/PageProduct" element={<PageProduct />}/>
           <Route path="/Favorites" element={<Favorites/>}/>
           <Route path="/Contact" element={<Contact />}/>
           <Route path="*" element={<NotFound />}/>
