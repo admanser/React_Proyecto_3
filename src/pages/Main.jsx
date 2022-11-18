@@ -9,6 +9,7 @@ import RecupPass from "./RecupPass";
 import PageProduct from "./PageProduct";
 import Contact from "./Contact";
 import Favorites from "./Favorites";
+import UserReg from "./UserReg";
 
 const Main = () => {
   return (
@@ -17,6 +18,7 @@ const Main = () => {
         <Navbar />
         <Routes>
           <Route path="/" element={<Landing />} />
+          <Route path="/UserReg" element={<UserReg />} />
           <Route path="/recupPass" element={<RecupPass />} />
           <Route path="/PageProduct" element={<PageProduct />} />
           <Route path="/Favorites" element={<Favorites />} />

@@ -6,6 +6,7 @@ const Navbar1 = () => {
   let activeStyle = {
     fontWeight: "bold",
   };
+
   return (
     <Navbar
       id="nav"
@@ -29,7 +30,7 @@ const Navbar1 = () => {
               />
               <Button variant="outline-dark">buscar</Button>
             </Form>
-            <Nav.Link href="#action1" className="mt-1">
+            <Nav.Link href="/UserReg" className="mt-1">
               Registrarse
             </Nav.Link>
             <Nav.Link href="#action2" className="mt-1">
