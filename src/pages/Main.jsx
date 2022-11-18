@@ -1,6 +1,6 @@
 import React from "react";
-import { Route, Routes } from 'react-router-dom';
-import { Container } from 'react-bootstrap';
+import { Route, Routes } from "react-router-dom";
+import { Container } from "react-bootstrap";
 import Navbar from "../components/Navbar";
 import Landing from "./Landing";
 import NotFound from "./NotFound";
