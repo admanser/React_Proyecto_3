@@ -9,7 +9,11 @@ const Movie = ({ d }) => {
     <Card className='p-0'>
         <Card.Img className="top" src={d.image} />
             <Card.Body>
-                <Card.Title className='movie-title'>{d.title}</Card.Title>
+                <Card.Title className='movie-title'>
+                <Link to={`/movie/${d.id}`}>
+                    {d.title}
+                </Link>
+                </Card.Title>
             </Card.Body>
             <Card.Footer className='p-1'>
                 <Row>
@@ -18,7 +22,7 @@ const Movie = ({ d }) => {
                         <span className="p-1">1</span>
                     </Col>
                     <Col>
-                        <Link to="/checkout">  
+                        <Link to="/">  
                             <div className='d-flex justify-content-end movie-title'>
                                 <p>Trailer</p>
                             </div> 
