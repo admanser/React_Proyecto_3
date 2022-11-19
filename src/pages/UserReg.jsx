@@ -1,41 +1,101 @@
-import React, { useState } from "react";
+import React, {useState} from 'react';
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
+import { Formik, Form, Field, ErrorMessage } from 'formik';
 
-const UserReg = (s, h) => {
-  const [show, setShow] = useState(false);
-
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
-
+const UserReg = ({ show, handleClose }) => {
+  const [formularioEnviado, cambiarFormularioEnviado] = useState(false);
   return (
-    <>
-      <Button variant="primary" onClick={handleShow}>
-        Launch static backdrop modal
-      </Button>
-
-      <Modal
-        show={show}
-        onHide={handleClose}
-        backdrop="static"
-        keyboard={false}
-      >
-        <Modal.Header closeButton>
-          <Modal.Title>Modal title</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          I will not close if you click outside me. Don't even try to press
-          escape key.
-        </Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Close
-          </Button>
-          <Button variant="primary">Understood</Button>
-        </Modal.Footer>
-      </Modal>
-    </>
+    <Formik>
+      <form>
+        <Modal
+          show={show}
+          onHide={handleClose}
+          backdrop="static"
+          keyboard={false}
+        >
+          <Modal.Header closeButton>
+            <Modal.Title>Registro Usuario</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>{/* Insertar código correspondiente */}</Modal.Body>
+          <Modal.Footer>
+            <Button variant="secondary" onClick={handleClose}>
+              Cerrar
+            </Button>
+            <Button variant="primary">Registar</Button>
+          </Modal.Footer>
+        </Modal>
+      </form>
+    </Formik>
   );
 };
 
 export default UserReg;
+
+
+
+
+
+
+	
+		<>
+			<Formik
+				initialValues={{
+					nombre: '',
+					correo: ''
+				}}
+				validate={(valores) => {
+					let errores = {};
+
+					// Validacion nombre
+					if(!valores.nombre){
+						errores.nombre = 'Por favor ingresa un nombre'
+					} else if(!/^[a-zA-ZÀ-ÿ\s]{1,40}$/.test(valores.nombre)){
+						errores.nombre = 'El nombre solo puede contener letras y espacios'
+					}
+
+					// Validacion correo
+					if(!valores.correo){
+						errores.correo = 'Por favor ingresa un correo electronico'
+					} else if(!/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/.test(valores.correo)){
+						errores.correo = 'El correo solo puede contener letras, numeros, puntos, guiones y guion bajo.'
+					}
+
+					return errores;
+				}}
+				onSubmit={(valores, {resetForm}) => {
+					resetForm();
+					console.log('Formulario enviado');
+					cambiarFormularioEnviado(true);
+					setTimeout(() => cambiarFormularioEnviado(false), 5000);
+				}}
+			>
+				{( {errors} ) => (
+					<Form className="formulario">
+						<div>
+							<label htmlFor="nombre">Nombre</label>
+							<Field
+								type="text" 
+								id="nombre" 
+								name="nombre" 
+								placeholder="John Doe"
+							/>
+							<ErrorMessage name="nombre" component={() => (<div className="error">{errors.nombre}</div>)} />
+						</div>
+						<div>
+							<label htmlFor="correo">Correo</label>
+							<Field
+								type="text" 
+								id="correo" 
+								name="correo" 
+								placeholder="correo@correo.com" 
+							/>
+							<ErrorMessage name="correo" component={() => (<div className="error">{errors.correo}</div>)} />
+						</div>
+
+
+						<button type="submit">Enviar</button>
+						{formularioEnviado && <p className="exito">Formulario enviado con exito!</p>}
+					</Form>
+				)}
+        </Formik>

@@ -8,7 +8,6 @@ import Footer from "../components/Footer";
 import RecupPass from "./RecupPass";
 import Contact from "./Contact";
 import Favorites from "./Favorites";
-import UserReg from "./UserReg";
 
 const Main = () => {
   return (
@@ -17,7 +16,6 @@ const Main = () => {
         <Navbar />
         <Routes>
           <Route path="/" element={<Landing />} />
-          <Route path="/UserReg" element={<UserReg />} />
           <Route path="/recupPass" element={<RecupPass />} />
           <Route path="/Favorites" element={<Favorites />} />
           <Route path="/Contact" element={<Contact />} />
