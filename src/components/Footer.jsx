@@ -10,7 +10,7 @@ const Footer = () => {
           <img src="/img/icons/logo.png" alt="logo.png" width={110} />
         </Col>
         <Col>
-          <Row className=" g-3 mt-3">
+          <Row className="g-3 mt-3 mb-2">
             <a className="" href="">
               link1
             </a>
@@ -23,14 +23,14 @@ const Footer = () => {
           </Row>
         </Col>
         <Col>
-          <Row className=" g-3 mt-3 ">
+          <Row className="g-3 mt-3 mb-2">
             <a href="">link4</a>
             <a href="">link5</a>
             <a href="">link6</a>
           </Row>
         </Col>
-        <Col>
-          <div className="d-flex mt-5">
+        <Col className="d-flex justify-content-center mt-2 me-2">
+          <div className="d-flex mt-3 mb-2">
             <h3 className="col">
               <a href="https://facebook.com">
                 <img

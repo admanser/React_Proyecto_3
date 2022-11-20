@@ -12,7 +12,7 @@ import Favorites from "./Favorites";
 const Main = () => {
   return (
     <>
-      <Container fluid className="px-0 mt-5 d-flex flex-column min-vh-100">
+      <Container fluid className="px-0 mt-0 d-flex flex-column min-vh-100">
         <Navbar />
         <Routes>
           <Route path="/" element={<Landing />}/>
