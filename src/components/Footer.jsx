@@ -3,30 +3,29 @@ import { NavLink } from "react-router-dom";
 import { Row, Col, Container } from "react-bootstrap";
 
 const Footer = () => {
+
   return (
     <Container fluid className="m-0">
-      <Row className="d-flex" style={{ backgroundColor: "#FAA916" }}>
+      <Row className="d-flex justify-content-center " style={{ backgroundColor: "#FAA916" }}>
         <Col className="d-flex justify-content-center align-items-center">
           <img src="/img/icons/logo.png" alt="logo.png" width={110} />
         </Col>
         <Col>
-          <Row className="g-3 mt-3 mb-2">
-            <a className="" href="">
-              link1
-            </a>
-            <a className="" href="">
-              link2
-            </a>
-            <a className="" href="">
-              link3
-            </a>
-          </Row>
+          <Row className="g-3 mt-3 mb-2 d-none d-md-block">
+          <Row className="g-3">
+            <a className="" href="">link1</a>
+            <a className="" href="">link2</a>
+            <a className="" href="">link3</a>
+            </Row>
+            </Row>
         </Col>
         <Col>
-          <Row className="g-3 mt-3 mb-2">
+          <Row className="mt-3  mb-2 d-none d-md-block">
+          <Row className="g-3">
             <a href="">link4</a>
             <a href="">link5</a>
             <a href="">link6</a>
+            </Row>
           </Row>
         </Col>
         <Col className="d-flex justify-content-center mt-2 me-2">
@@ -72,8 +71,7 @@ const Footer = () => {
       </Row>
       <Row>
         <h5 className="text-center bg-dark text-light py-2 m-0">
-          {" "}
-          © Copyright 2022 RollingCode Films - All Rights Reserved
+          &copy; Copyright 2022 RollingCode Films - All Rights Reserved
         </h5>
       </Row>
     </Container>
