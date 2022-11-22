@@ -4,11 +4,6 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-.image {
-  margin: 0;
-  box-sizing: border-box;
-}
-
 .movie-title {
   font-size: 15px;
   text-decoration: none;
