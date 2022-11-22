@@ -6,31 +6,33 @@ import { Link } from 'react-router-dom';
 
 const Movie = ({ d }) => {
   return (
-    <Card className='p-0'>
-        <Card.Img className="top" src={d.image} />
-            <Card.Body>
-                <Card.Title className='movie-title'>
-                <Link to={`/movie/${d.id}`}>
-                    {d.title}
-                </Link>
-                </Card.Title>
-            </Card.Body>
-            <Card.Footer className='p-1'>
-                <Row>
-                    <Col>
-                        <i className="fa-solid fa-star"></i>
-                        <span className="p-1">1</span>
-                    </Col>
-                    <Col>
-                        <Link to="/">  
-                            <div className='d-flex justify-content-end movie-title'>
-                                <p>Trailer</p>
-                            </div> 
-                        </Link>
-                    </Col>
-                </Row>
-            </Card.Footer>
-    </Card>
+    <Col className="g-4">
+        <Card className='p-0 h-100'>
+            <Card.Img className="top" src={d.image} />
+                <Card.Body>
+                    <Card.Title className='movie-title'>
+                    <Link to={`/movieDetail/${d.id}`}>
+                        {d.title}
+                    </Link>
+                    </Card.Title>
+                </Card.Body>
+                <Card.Footer className='p-1'>
+                    <Row>
+                        <Col>
+                            <i className="fa-solid fa-star"></i>
+                            <span className="p-1">1</span>
+                        </Col>
+                        <Col>
+                            <Link to="/">  
+                                <div className='d-flex justify-content-end movie-title'>
+                                    <p>Trailer</p>
+                                </div> 
+                            </Link>
+                        </Col>
+                    </Row>
+                </Card.Footer>
+        </Card>
+    </Col>
   );
 };
 
