@@ -13,14 +13,11 @@ const Navbar1 = () => {
       style={{ backgroundColor: "#FAA916" }}
       className="fixed-top col-12"
     >
-      <Container fluid className="col-9">
+      <Container fluid className="col-12 col-md-12">
         <NavLink className="me-3" to="/">
           <img src="/img/icons/logo.png" alt="logo.png" width={50} />
         </NavLink>
-        <Navbar.Toggle aria-controls="navbarScroll" />
-        <Navbar.Collapse id="navbarScroll">
-          <Nav className="me-auto my-2 my-lg-0">
-            <Form className="d-flex h-25 pt-2">
+        <Form className="d-flex h-25 pt-2">
               <Form.Control
                 type="search"
                 placeholder="Ingrese su búsqueda"
@@ -29,6 +26,9 @@ const Navbar1 = () => {
               />
               <Button variant="outline-dark">buscar</Button>
             </Form>
+        <Navbar.Toggle aria-controls="navbarScroll" />
+        <Navbar.Collapse id="navbarScroll">
+          <Nav className="me-auto my-2 my-lg-0">
             <Nav.Link href="#action1" className="mt-1">
               Registrarse
             </Nav.Link>
