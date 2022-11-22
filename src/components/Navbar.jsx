@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Navbar, Container, Nav, Form, Button } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
-import UserReg from "../pages/UserReg";
+import UserReg from "../components/UserReg";
 
 const Navbar1 = () => {
   let activeStyle = {
