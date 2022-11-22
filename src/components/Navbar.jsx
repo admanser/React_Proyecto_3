@@ -14,7 +14,6 @@ const Navbar1 = () => {
   const handleShow = () => setShow(true);
 
   return (
-<<<<<<< HEAD
     <>
       <Navbar
         id="nav"
@@ -22,58 +21,28 @@ const Navbar1 = () => {
         style={{ backgroundColor: "#FAA916" }}
         className="fixed-top col-12"
       >
-        <Container fluid className="col-9">
+        <Container fluid className="col-12 col-md-12">
           <NavLink className="me-3" to="/">
             <img src="/img/icons/logo.png" alt="logo.png" width={50} />
           </NavLink>
+          <Form className="d-flex h-25 pt-2">
+            <Form.Control
+              type="search"
+              placeholder="Ingrese su búsqueda"
+              className="me-2"
+              aria-label="Search"
+            />
+            <Button variant="outline-dark">buscar</Button>
+          </Form>
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
             <Nav className="me-auto my-2 my-lg-0">
-              <Form className="d-flex h-25 pt-2">
-                <Form.Control
-                  type="search"
-                  placeholder="Ingrese su búsqueda"
-                  className="me-2"
-                  aria-label="Search"
-                />
-                <Button variant="outline-dark">buscar</Button>
-              </Form>
-              <Nav.Link href="" className="mt-1" onClick={handleShow}>
+              <Nav.Link href="#action1" className="mt-1" onClick={handleShow}>
                 Registrarse
               </Nav.Link>
               <Nav.Link href="#action2" className="mt-1">
                 Ingresar
               </Nav.Link>
-=======
-    <Navbar
-      id="nav"
-      expand="lg"
-      style={{ backgroundColor: "#FAA916" }}
-      className="fixed-top col-12"
-    >
-      <Container fluid className="col-12 col-md-12">
-        <NavLink className="me-3" to="/">
-          <img src="/img/icons/logo.png" alt="logo.png" width={50} />
-        </NavLink>
-        <Form className="d-flex h-25 pt-2">
-              <Form.Control
-                type="search"
-                placeholder="Ingrese su búsqueda"
-                className="me-2"
-                aria-label="Search"
-              />
-              <Button variant="outline-dark">buscar</Button>
-            </Form>
-        <Navbar.Toggle aria-controls="navbarScroll" />
-        <Navbar.Collapse id="navbarScroll">
-          <Nav className="me-auto my-2 my-lg-0">
-            <Nav.Link href="#action1" className="mt-1">
-              Registrarse
-            </Nav.Link>
-            <Nav.Link href="#action2" className="mt-1">
-              Ingresar
-            </Nav.Link>
->>>>>>> 8bb6a4e41374e640ee393229bd172559bf46e3ff
 
               <NavLink
                 className="nav-link mt-1"

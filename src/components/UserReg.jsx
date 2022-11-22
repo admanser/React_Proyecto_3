@@ -45,13 +45,13 @@ const UserReg = ({ show, handleClose }) => {
           setTimeout(() => setsentform(false), 5000);
         }}
       >
-        {({ errors }) => (
+        {({ errors, resetForm }) => (
           <Modal
             size="lg"
             show={show}
             onHide={handleClose}
-            backdrop="static"
-            keyboard={false}
+            // backdrop="static"
+            // keyboard={false}
           >
             <Modal.Header closeButton>
               <Modal.Title className="fw-bold">
@@ -93,10 +93,13 @@ const UserReg = ({ show, handleClose }) => {
             </Modal.Body>
 
             <Modal.Footer>
-              <Button variant="secondary" onClick={handleClose}>
+              <Button className="btn-cerrar" variant="" onClick={handleClose}>
                 Cerrar
               </Button>
-              <Button>Registrar</Button>
+              <Button className="btn-registrar" variant="">
+                Registrar
+              </Button>
+
               {sentform && (
                 <p className="exito">Formulario enviado con exito!</p>
               )}
