@@ -15,11 +15,11 @@ const Main = () => {
       <Container fluid className="px-0 mt-0 d-flex flex-column min-vh-100">
         <Navbar />
         <Routes>
-          <Route path="/" element={<Landing />}/>
-          <Route path="/recupPass" element={<RecupPass />}/>
-          <Route path="/Favorites" element={<Favorites/>}/>
-          <Route path="/Contact" element={<Contact />}/>
-          <Route path="*" element={<NotFound />}/>
+          <Route path="/" element={<Landing />} />
+          <Route path="/recupPass" element={<RecupPass />} />
+          <Route path="/Favorites" element={<Favorites />} />
+          <Route path="/Contact" element={<Contact />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
       </Container>
