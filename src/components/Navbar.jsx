@@ -62,7 +62,11 @@ const Navbar1 = () => {
               <div className="row">
                 <h3 className="col">
                   {" "}
-                  <a href="https://facebook.com">
+                  <a
+                    href="https://facebook.com"
+                    target={"_blank"}
+                    rel="noreferrer"
+                  >
                     <img
                       src="/img/icons/facebook.png"
                       alt="Icono Facebook"
@@ -72,7 +76,11 @@ const Navbar1 = () => {
                 </h3>
                 <h3 className="col">
                   {" "}
-                  <a href="https://instagram.com">
+                  <a
+                    href="https://instagram.com"
+                    target={"_blank"}
+                    rel="noreferrer"
+                  >
                     <img
                       src="/img/icons/instagram.png"
                       alt="Icono Instagram"
@@ -82,7 +90,11 @@ const Navbar1 = () => {
                 </h3>
                 <h3 className="col">
                   {" "}
-                  <a href="https://twitter.com">
+                  <a
+                    href="https://twitter.com"
+                    target={"_blank"}
+                    rel="noreferrer"
+                  >
                     <img
                       src="/img/icons/twitter.png"
                       alt="Icono Twitter"
@@ -92,7 +104,11 @@ const Navbar1 = () => {
                 </h3>
                 <h3 className="col">
                   {" "}
-                  <a href="https://youtube.com">
+                  <a
+                    href="https://youtube.com"
+                    target={"_blank"}
+                    rel="noreferrer"
+                  >
                     <img
                       src="/img/icons/youtube.png"
                       alt="Icono Youtube"
