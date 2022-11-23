@@ -32,20 +32,8 @@ const Navbar1 = () => {
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav className="me-auto my-2 my-lg-0">
-            <Nav.Link className="mt-1" onClick={handleShowSignUp}>Registrarse</Nav.Link>
-            <Nav.Link className="mt-1" onClick={handleShowLogin}>Ingresar</Nav.Link>
-            <NavLink
-              className="nav-link mt-1"
-              to="/Contact"
-              style={({ isActive }) => (isActive ? activeStyle : undefined)}>
-              Contacto
-            </NavLink>
-            <NavLink
-              className="nav-link mt-1 me-4"
-              to="/Favorites"
-              style={({ isActive }) => (isActive ? activeStyle : undefined)}>
-              Favoritos
-            </NavLink>
+            <NavLink className="nav-link mt-1" to="/Contact">Contacto</NavLink>
+            <NavLink className="nav-link mt-1 me-4" to="/Favorites">Favoritos</NavLink>
 
             <div className="row">
               <h3 className="col">
@@ -90,6 +78,8 @@ const Navbar1 = () => {
               </h3>
             </div>
           </Nav>
+          <Button className="mt-1 me-2" onClick={handleShowSignUp}>Registrarse</Button>
+          <Button className="mt-1 me-2" onClick={handleShowLogin}>Iniciar sesión</Button>
         </Navbar.Collapse>
       </Container>
     </Navbar>
