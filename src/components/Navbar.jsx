@@ -2,17 +2,17 @@ import React, {useState} from "react";
 import { Navbar, Container, Nav, Form, Button } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import Login from "./Login";
-import Registro from "./Registro";
+import SignUp from "./SignUp";
 
 const Navbar1 = () => {
 
-  const [show, setShow] = useState(false);
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+  const [showLogin, setShowLogin] = useState(false);
+  const handleCloseLogin = () => setShowLogin(false);
+  const handleShowLogin = () => setShowLogin(true);
 
-  const [show2, setShow2] = useState(false);
-  const handleClose2 = () => setShow2(false);
-  const handleShow2 = () => setShow2(true);
+  const [showSignUp, setShowSignUp] = useState(false);
+  const handleCloseSignUp = () => setShowSignUp(false);
+  const handleShowSignUp = () => setShowSignUp(true);
 
 
   let activeStyle = {
@@ -32,8 +32,8 @@ const Navbar1 = () => {
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav className="me-auto my-2 my-lg-0">
-            <Button className="mt-1" type="submit" onClick={handleShow2}>Registrarse</Button>
-            <Nav.Link className="mt-1" type="submit" onClick={handleShow}>Ingresar</Nav.Link>
+            <Nav.Link className="mt-1" onClick={handleShowSignUp}>Registrarse</Nav.Link>
+            <Nav.Link className="mt-1" onClick={handleShowLogin}>Ingresar</Nav.Link>
             <NavLink
               className="nav-link mt-1"
               to="/Contact"
@@ -93,8 +93,8 @@ const Navbar1 = () => {
         </Navbar.Collapse>
       </Container>
     </Navbar>
-    <Login show={show} handleClose={handleClose}/>
-    <Registro show2={show2} handleClose2={handleClose2}/>
+    <Login handleShowSignUp={handleShowSignUp} show={showLogin} handleClose={handleCloseLogin}/>
+    <SignUp  show={showSignUp} handleClose={handleCloseSignUp}/>
   </>
   );
 };
