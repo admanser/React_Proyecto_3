@@ -2,11 +2,12 @@ import React from 'react';
 import {Button, Modal, Form} from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
-const Login = ({show, handleClose}) => {
+
+const Registro = ({show, handleClose2}) => {
 
 
     return (
-      <Modal show={show} onHide={handleClose}>
+      <Modal show={show} onHide2={handleClose2}>
         <Modal.Header closeButton>
           <Modal.Title>Iniciar sesión</Modal.Title>
         </Modal.Header>
@@ -33,10 +34,10 @@ const Login = ({show, handleClose}) => {
           </Form>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
+          <Button variant="secondary" onClick={handleClose2}>
             Cerrar
           </Button>
-          <Button variant="primary" onClick={handleClose}>
+          <Button variant="primary" onClick={handleClose2}>
             Aceptar
           </Button>
           </Modal.Footer>
@@ -45,4 +46,4 @@ const Login = ({show, handleClose}) => {
   }
 ;
 
-export default Login;
+export default Registro;
