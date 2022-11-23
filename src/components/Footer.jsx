@@ -3,35 +3,43 @@ import { NavLink } from "react-router-dom";
 import { Row, Col, Container } from "react-bootstrap";
 
 const Footer = () => {
-
   return (
     <Container fluid className="m-0">
-      <Row className="d-flex justify-content-center " style={{ backgroundColor: "#FAA916" }}>
+      <Row
+        className="d-flex justify-content-center "
+        style={{ backgroundColor: "#FAA916" }}
+      >
         <Col className="d-flex justify-content-center align-items-center">
           <img src="/img/icons/logo.png" alt="logo.png" width={110} />
         </Col>
         <Col>
           <Row className="g-3 mt-3 mb-2 d-none d-md-block">
-          <Row className="g-3">
-            <a className="" href="">link1</a>
-            <a className="" href="">link2</a>
-            <a className="" href="">link3</a>
+            <Row className="g-3">
+              <a className="" href="">
+                link1
+              </a>
+              <a className="" href="">
+                link2
+              </a>
+              <a className="" href="">
+                link3
+              </a>
             </Row>
-            </Row>
+          </Row>
         </Col>
         <Col>
           <Row className="mt-3  mb-2 d-none d-md-block">
-          <Row className="g-3">
-            <a href="">link4</a>
-            <a href="">link5</a>
-            <a href="">link6</a>
+            <Row className="g-3">
+              <a href="">link4</a>
+              <a href="">link5</a>
+              <a href="">link6</a>
             </Row>
           </Row>
         </Col>
         <Col className="d-flex justify-content-center mt-2 me-2">
           <div className="d-flex mt-3 mb-2">
             <h3 className="col">
-              <a href="https://facebook.com">
+              <a href="https://facebook.com" target={"_blank"} rel="noreferrer">
                 <img
                   src="/img/icons/facebook.png"
                   alt="Icono Facebook"
@@ -40,7 +48,11 @@ const Footer = () => {
               </a>
             </h3>
             <h3 className="col">
-              <a href="https://instagram.com">
+              <a
+                href="https://instagram.com"
+                target={"_blank"}
+                rel="noreferrer"
+              >
                 <img
                   src="/img/icons/instagram.png"
                   alt="Icono Instagram"
@@ -49,7 +61,7 @@ const Footer = () => {
               </a>
             </h3>
             <h3 className="col">
-              <a href="https://twitter.com">
+              <a href="https://twitter.com" target={"_blank"} rel="noreferrer">
                 <img
                   src="/img/icons/twitter.png"
                   alt="Icono Twitter"
@@ -58,7 +70,7 @@ const Footer = () => {
               </a>
             </h3>
             <h3 className="col">
-              <a href="https://youtube.com">
+              <a href="https://youtube.com" target={"_blank"} rel="noreferrer">
                 <img
                   src="/img/icons/youtube.png"
                   alt="Icono Youtube"
