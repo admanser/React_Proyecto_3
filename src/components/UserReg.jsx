@@ -45,22 +45,21 @@ const UserReg = ({ show, handleClose }) => {
           setTimeout(() => setsentform(false), 5000);
         }}
       >
-        {({ errors, resetForm }) => (
+        {({ errors }) => (
           <Modal
-            size="lg"
+            size="md"
             show={show}
             onHide={handleClose}
-            // backdrop="static"
-            // keyboard={false}
+            backdrop="static"
+            keyboard={false}
           >
             <Modal.Header closeButton>
               <Modal.Title className="fw-bold">
                 Registro de Usuarios
               </Modal.Title>
             </Modal.Header>
-
-            <Modal.Body>
-              <Form className="formulario">
+            <Form className="formulario">
+              <Modal.Body>
                 <div>
                   <label htmlFor="name">Nombre de Usuario</label>
                   <Field
@@ -89,21 +88,21 @@ const UserReg = ({ show, handleClose }) => {
                     )}
                   />
                 </div>
-              </Form>
-            </Modal.Body>
+              </Modal.Body>
 
-            <Modal.Footer>
-              <Button className="btn-cerrar" variant="" onClick={handleClose}>
-                Cerrar
-              </Button>
-              <Button className="btn-registrar" variant="">
-                Registrar
-              </Button>
+              <Modal.Footer>
+                <Button className="btn-cerrar" variant="" onClick={handleClose}>
+                  Cerrar
+                </Button>
+                <Button className="btn-registrar" variant="">
+                  Registrar
+                </Button>
 
-              {sentform && (
-                <p className="exito">Formulario enviado con exito!</p>
-              )}
-            </Modal.Footer>
+                {sentform && (
+                  <p className="exito">Formulario enviado con exito!</p>
+                )}
+              </Modal.Footer>
+            </Form>
           </Modal>
         )}
       </Formik>
