@@ -2,8 +2,12 @@ import React from 'react';
 import {Button, Modal, Form} from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
-const Login = ({show, handleClose}) => {
-
+const Login = ({show, handleClose, handleShowSignUp}) => {
+  const handleToggleModal = (evt) => {
+    evt.preventDefault();
+    handleClose();
+    handleShowSignUp();
+  }
 
     return (
       <Modal show={show} onHide={handleClose}>
@@ -28,7 +32,7 @@ const Login = ({show, handleClose}) => {
             </Form.Text>
             <br/>
             <Form.Text>
-              Todavia no tienes cuenta? Que esperas para registrarte!
+              Todavia no tienes cuenta? <a href='#'onClick={handleToggleModal}>Registrate! </a>
             </Form.Text>
           </Form>
         </Modal.Body>

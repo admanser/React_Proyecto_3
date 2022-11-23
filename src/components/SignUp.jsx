@@ -3,25 +3,25 @@ import {Button, Modal, Form} from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 
-const Registro = ({show, handleClose2}) => {
+const SignUp = ({show, handleClose}) => {
 
 
     return (
-      <Modal show={show} onHide2={handleClose2}>
+      <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>Iniciar sesión</Modal.Title>
+          <Modal.Title>...</Modal.Title>
         </Modal.Header>
         <Modal.Body> 
           <Form>
             <Form.Group className="mb-3" controlId="formBasicEmail">
-              <Form.Label>Email</Form.Label>
+              <Form.Label>...</Form.Label>
               <Form.Control type="email" placeholder="Ingrese su Email" />
               <Form.Text className="text-muted">
-                Por favor ingrese su email correctamente.
+               
               </Form.Text>
             </Form.Group>
             <Form.Group className="mb-3" controlId="formBasicPassword">
-              <Form.Label>Contraseña</Form.Label>
+              <Form.Label>...</Form.Label>
               <Form.Control type="password" placeholder="Ingrese su contraseña" />
             </Form.Group>
             <Form.Text>
@@ -34,10 +34,10 @@ const Registro = ({show, handleClose2}) => {
           </Form>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose2}>
+          <Button variant="secondary" onClick={handleClose}>
             Cerrar
           </Button>
-          <Button variant="primary" onClick={handleClose2}>
+          <Button variant="primary" onClick={handleClose}>
             Aceptar
           </Button>
           </Modal.Footer>
@@ -46,4 +46,4 @@ const Registro = ({show, handleClose2}) => {
   }
 ;
 
-export default Registro;
+export default SignUp;
