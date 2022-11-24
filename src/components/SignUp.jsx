@@ -1,7 +1,7 @@
 import React from "react";
 import { Button, Modal } from "react-bootstrap";
 import { Form, Formik } from "formik";
-import { advancedSchema } from "../schemas";
+import { singupSchema } from "../schemas";
 import CustomRePass from "./CustomRePass";
 import CustomInput from "./CustomInput";
 import CustomPass from "./CustomPass";
@@ -15,14 +15,14 @@ const SignUp = ({ show, handleClose }) => {
   return (
     <Formik
       initialValues={{ username: "", password: "", confirmpass: "" }}
-      validationSchema={advancedSchema}
+      validationSchema={singupSchema}
       onSubmit={onSubmit}
     >
       {({ isSubmitting }) => (
         <>
           <Modal show={show} onHide={handleClose}>
             <Modal.Header closeButton>
-              <Modal.Title className="text-dark fw-bold">
+              <Modal.Title className="text-dark">
                 Registro de Usuarios
               </Modal.Title>
             </Modal.Header>
@@ -32,7 +32,7 @@ const SignUp = ({ show, handleClose }) => {
                   label="Usuario"
                   name="username"
                   type="text"
-                  placeholder="Ingrese un nombre de Usuario"
+                  placeholder="Bruno Díaz"
                 />
                 <CustomPass
                   label="Contraseña"
@@ -53,10 +53,10 @@ const SignUp = ({ show, handleClose }) => {
             </Modal.Body>
             <Modal.Footer>
               <Button variant="secondary" onClick={handleClose}>
-                Close
+                Cerrar
               </Button>
               <Button type="submit" variant="primary" disabled={isSubmitting}>
-                Save Changes
+                Crear Cuenta
               </Button>
             </Modal.Footer>
           </Modal>
