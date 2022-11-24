@@ -5,21 +5,20 @@ import Navbar from "../components/Navbar";
 import Landing from "./Landing";
 import NotFound from "./NotFound";
 import Footer from "../components/Footer";
-import RecupPass from "./RecupPass";
+import RecoveryPass from "../pages/RecoveryPass";
 import Contact from "./Contact";
 import Favorites from "./Favorites";
 import Navbar2 from "../components/Navbar2";
-
 
 const Main = () => {
   return (
     <>
       <Container fluid className="px-0 mt-0 d-flex flex-column min-vh-100">
         <Navbar />
-        <Navbar2/>
+        <Navbar2 />
         <Routes>
           <Route path="/" element={<Landing />} />
-          <Route path="/recupPass" element={<RecupPass />} />
+          <Route path="/recoveryPass" element={<RecoveryPass />} />
           <Route path="/Favorites" element={<Favorites />} />
           <Route path="/Contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
