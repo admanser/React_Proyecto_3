@@ -8,12 +8,15 @@ import Footer from "../components/Footer";
 import RecupPass from "./RecupPass";
 import Contact from "./Contact";
 import Favorites from "./Favorites";
+import Navbar2 from "../components/Navbar2";
+
 
 const Main = () => {
   return (
     <>
       <Container fluid className="px-0 mt-0 d-flex flex-column min-vh-100">
         <Navbar />
+        <Navbar2/>
         <Routes>
           <Route path="/" element={<Landing />} />
           <Route path="/recupPass" element={<RecupPass />} />
