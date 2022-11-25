@@ -6,21 +6,9 @@ import Ratio from 'react-bootstrap/Ratio';
 const Category = () => {
   return (
     <Container className='mb-5'>
-         <h2 className='mt-2'>BÚSQUEDA</h2>
+         <h2 className='mt-2'>CATEGORIAS</h2>
          <hr></hr>
         <Row className='mb-5'>
-            <Dropdown>
-                <Dropdown.Toggle variant="success" id="dropdown-basic">
-                    Categorías
-                </Dropdown.Toggle>
-
-                <Dropdown.Menu>
-                    <Dropdown.Item href="#/action-1">Comedias</Dropdown.Item>
-                    <Dropdown.Item href="#/action-2">Acción</Dropdown.Item>
-                    <Dropdown.Item href="#/action-3">Drama</Dropdown.Item>
-                    <Dropdown.Item href="#/action-3">Ciencia Ficción</Dropdown.Item>
-                </Dropdown.Menu>
-            </Dropdown>
         </Row>
          <Row xs={1} md={2} className="g-5">
             <Col>

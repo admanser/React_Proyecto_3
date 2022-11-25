@@ -8,7 +8,7 @@ const Movie = ({ d }) => {
   return (
     <Col className="g-4">
         <Card className='p-0 h-100'>
-            <Card.Img className="top" src={d.image} />
+            <Card.Img className="top image-movie" src={d.image} />
                 <Card.Body>
                     <Card.Title className='movie-title'>
                     <Link to={`/movie/${d.id}`}>
