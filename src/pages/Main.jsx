@@ -9,6 +9,7 @@ import RecoveryPass from "../pages/RecoveryPass";
 import Contact from "./Contact";
 import Favorites from "./Favorites";
 import Navbar2 from "../components/Navbar2";
+import MovieDetailContainer from "../components/MovieDetailContainer";
 
 const Main = () => {
   return (
@@ -21,6 +22,7 @@ const Main = () => {
           <Route path="/recoveryPass" element={<RecoveryPass />} />
           <Route path="/Favorites" element={<Favorites />} />
           <Route path="/Contact" element={<Contact />} />
+          <Route path="/movie/:id" element={<MovieDetailContainer />}/>
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />

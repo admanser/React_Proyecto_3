@@ -15,6 +15,11 @@ body {
   grid-template-columns: 250px 400px 500px;
 }
 
+.image-movie {
+	width: 150px;
+	height: 150px;
+}
+
 @media (max-width: 720px) {
   .width-col {
     display: block;
