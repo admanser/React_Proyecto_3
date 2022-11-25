@@ -1,11 +1,13 @@
-import React from "react";
 import { Navbar, Container, Nav, Form, Button } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
+import React, { useState } from 'react';
+import { data } from "./ListMoviesContainer";
 
 const Navbar1 = () => {
   let activeStyle = {
     fontWeight: "bold",
   };
+
   return (
     <Navbar
       id="nav"
@@ -26,6 +28,7 @@ const Navbar1 = () => {
                 placeholder="Ingrese su búsqueda"
                 className="me-2"
                 aria-label="Search"
+               
               />
               <Button variant="outline-dark">buscar</Button>
             </Form>

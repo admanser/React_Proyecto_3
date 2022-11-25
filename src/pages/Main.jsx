@@ -8,6 +8,7 @@ import Footer from "../components/Footer";
 import RecupPass from "./RecupPass";
 import Contact from "./Contact";
 import Favorites from "./Favorites";
+import MovieDetailContainer from "../components/MovieDetailContainer";
 
 const Main = () => {
   return (
@@ -17,8 +18,9 @@ const Main = () => {
         <Routes>
           <Route path="/" element={<Landing />}/>
           <Route path="/recupPass" element={<RecupPass />}/>
-          <Route path="/Favorites" element={<Favorites/>}/>
-          <Route path="/Contact" element={<Contact />}/>
+          <Route path="/favorites" element={<Favorites/>}/>
+          <Route path="/contact" element={<Contact />}/>
+          <Route path="/movie/:id" element={<MovieDetailContainer />}/>
           <Route path="*" element={<NotFound />}/>
         </Routes>
         <Footer />

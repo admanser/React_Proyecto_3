@@ -20,6 +20,40 @@ body {
   grid-template-columns: 250px 400px 500px;
 }
 
+.form-size {
+	width:400px;
+	padding:16px;
+	border-radius:10px;
+	margin:0 auto;
+	background-color:#ccc;
+}
+
+.form-size input {
+	width:300px;
+	padding:3px 10px;
+	border:1px solid #f6f6f6;
+	border-radius:3px;
+	background-color:#f6f6f6;
+	margin:8px 0;
+	display:inline-block;
+}
+
+.form-size textarea {
+	width:80%;
+	height:100px;
+	border:1px solid #f6f6f6;
+	border-radius:3px;
+	background-color:#f6f6f6;			
+	margin:8px 0;
+	resize:none;
+	display:block;
+}
+
+.image-movie {
+	width: 150px;
+	height: 150px;
+}
+
 @media (max-width: 720px) {
   .width-col {
     display: block;
