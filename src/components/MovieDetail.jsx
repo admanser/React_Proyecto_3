@@ -6,12 +6,12 @@ import NextPremieres from './NextPremieres';
 const MovieDetail = ({data}) => {
   return (
     <Container>
-        <h2 className='mt-2'>{data.title}</h2>
+        <h2 className='mt-2'>Nombre de pelicula</h2>
         <hr></hr>
         <Row>
           <div className="width-col">
               <Col  className="d-flex justify-content-start">
-                <img src={data.image}></img></Col>
+                <img src={data.image} className='image-movie'></img></Col>
               <Col>
                 <div className='d-block justify-content-start mt-2'>
                   <p>Categoría:</p>

@@ -11,7 +11,7 @@ const Movie = ({ d }) => {
             <Card.Img className="top" src={d.image} />
                 <Card.Body>
                     <Card.Title className='movie-title'>
-                    <Link to={`/movieDetail/${d.id}`}>
+                    <Link to={`/movie/${d.id}`}>
                         {d.title}
                     </Link>
                     </Card.Title>
