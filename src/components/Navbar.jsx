@@ -13,9 +13,6 @@ const Navbar1 = ({auth, validate, login, logout, loggedIn}) => {
   const handleCloseSignUp = () => setShowSignUp(false);
   const handleShowSignUp = () => setShowSignUp(true);
 
-  let activeStyle = {
-    fontWeight: "bold",
-  };
 
   const handleLogout = () => {
     logout()
@@ -36,7 +33,7 @@ const Navbar1 = ({auth, validate, login, logout, loggedIn}) => {
           </Nav>
 
           {loggedIn() ? (
-            <Button className="mt-1 me-2" onClick={handleLogout}>Cerrar sesión</Button>
+            <Button className="mt-1 me-2" onClick={handleLogout}> Cerrar sesión</Button>
 
           ) : (
             <>

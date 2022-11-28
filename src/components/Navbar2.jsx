@@ -11,7 +11,7 @@ const Navbar2 = () => {
         <Button variant="outline-dark">buscar</Button>
       </Form>
       <div/>
-          <div className="row ms-auto mt-2">
+          <div className="row ms-auto mt-2 me-2">
               <a className="col-3" href="https://facebook.com">
                 <img
                   src="/img/icons/facebook.png"

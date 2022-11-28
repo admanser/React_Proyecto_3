@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Button, Modal, Form } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
+import {toast, ToastContainer} from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 const Login = ({ show, handleClose, handleShowSignUp, auth, validate, login, logout }) => {
   const handleToggleModal = (evt) => {
@@ -21,6 +23,8 @@ const Login = ({ show, handleClose, handleShowSignUp, auth, validate, login, log
       setUserName('');
       setPassword('');
       handleClose();
+      navigate ("/Contact")
+      toast('bienvenido ' + userName)
     }
   };
 
@@ -32,6 +36,8 @@ const Login = ({ show, handleClose, handleShowSignUp, auth, validate, login, log
   }
     
   return (
+    <>
+    <ToastContainer/>
     <Modal show={show} onHide={handleClose}>
       <Modal.Header closeButton>
         <Modal.Title>Iniciar sesión</Modal.Title>
@@ -63,9 +69,9 @@ const Login = ({ show, handleClose, handleShowSignUp, auth, validate, login, log
           </Form.Text>
           <br />
           <Form.Text>
-            Todavia no tienes cuenta?{" "}
+            Todavia no tienes cuenta?
             <a href="#" onClick={handleToggleModal}>
-              Registrate!{" "}
+              Registrate!
             </a>
           </Form.Text>
         </Form>
@@ -79,6 +85,7 @@ const Login = ({ show, handleClose, handleShowSignUp, auth, validate, login, log
         </Button>
       </Modal.Footer>
     </Modal>
+    </>
   );
 };
 export default Login;
