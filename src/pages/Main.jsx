@@ -11,11 +11,17 @@ import Favorites from "./Favorites";
 import Navbar2 from "../components/Navbar2";
 import MovieDetailContainer from "../components/MovieDetailContainer";
 
-const Main = () => {
+const Main = ({auth, validate, login, logout, loggedIn}) => {
   return (
     <>
       <Container fluid className="px-0 mt-0 d-flex flex-column min-vh-100">
-        <Navbar />
+        <Navbar 
+         auth={auth}
+         validate={validate}
+         login={login}
+         logout={logout} 
+         loggedIn={loggedIn}
+         />
         <Navbar2 />
         <Routes>
           <Route path="/" element={<Landing />} />
