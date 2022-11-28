@@ -14,7 +14,7 @@ import MovieDetailContainer from "../components/MovieDetailContainer";
 const Main = ({auth, validate, login, logout, loggedIn}) => {
   return (
     <>
-      <Container fluid className="px-0 mt-0 d-flex flex-column min-vh-100">
+      
         <Navbar 
          auth={auth}
          validate={validate}
@@ -23,6 +23,7 @@ const Main = ({auth, validate, login, logout, loggedIn}) => {
          loggedIn={loggedIn}
          />
         <Navbar2 />
+        <Container fluid className="mt-0 d-flex flex-column min-vh-100">
         <Routes>
           <Route path="/" element={<Landing />} />
           <Route path="/recoveryPass" element={<RecoveryPass />} />
