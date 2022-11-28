@@ -25,12 +25,26 @@ const Main = ({auth, validate, login, logout, loggedIn}) => {
         <Navbar2 />
         <Container fluid className="mt-0 d-flex flex-column min-vh-100">
         <Routes>
-          <Route path="/" element={<Landing />} />
-          <Route path="/recoveryPass" element={<RecoveryPass />} />
-          <Route path="/Favorites" element={<Favorites />} />
-          <Route path="/Contact" element={<Contact />} />
-          <Route path="/movie/:id" element={<MovieDetailContainer />}/>
-          <Route path="*" element={<NotFound />} />
+          <Route 
+            path="/" 
+            element={<Landing />} />
+          <Route 
+            path="/recoveryPass" 
+            element={<RecoveryPass />} />;
+          <Route 
+            path="/Favorites" 
+            element={
+              auth.userName ? (
+              <Favorites /> ) : (<NotFound/>)}/> ;
+          <Route 
+          path="/Contact" 
+          element={<Contact />} />
+          <Route 
+            path="/movie/:id" 
+            element={<MovieDetailContainer />}/>
+          <Route 
+            path="*" 
+            element={<NotFound />} />
         </Routes>
         <Footer />
       </Container>
