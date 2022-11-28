@@ -3,8 +3,7 @@ import { Navbar, Container, Nav, Form, Button } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import Login from "./Login";
 import SignUp from "./SignUp";
-
-const Navbar1 = () => {
+const Navbar1 = ({auth, validate, login, logout, loggedIn}) => {
 
   const [showLogin, setShowLogin] = useState(false);
   const handleCloseLogin = () => setShowLogin(false);
@@ -14,10 +13,14 @@ const Navbar1 = () => {
   const handleCloseSignUp = () => setShowSignUp(false);
   const handleShowSignUp = () => setShowSignUp(true);
 
-
   let activeStyle = {
     fontWeight: "bold",
   };
+
+  const handleLogout = () => {
+    logout()
+  }
+
   return (
   <> 
     <Navbar id="nav" expand="lg" style={{ backgroundColor: "#FAA916" }} className="fixed-top col-12">
@@ -31,12 +34,27 @@ const Navbar1 = () => {
             <NavLink className="nav-link mt-1" to="/Contact">Contacto</NavLink>
             <NavLink className="nav-link mt-1 me-4" to="/Favorites">Favoritos</NavLink>
           </Nav>
-          <Button className="mt-1 me-2" onClick={handleShowSignUp}>Registrarse</Button>
-          <Button className="mt-1 me-2" onClick={handleShowLogin}>Iniciar sesión</Button>
+
+          {loggedIn() ? (
+            <Button className="mt-1 me-2" onClick={handleLogout}>Cerrar sesión</Button>
+
+          ) : (
+            <>
+              <Button className="mt-1 me-2" onClick={handleShowSignUp}>Registrarse</Button>
+              <Button className="mt-1 me-2" onClick={handleShowLogin}>Iniciar sesión</Button>
+            </>
+          )}
+
         </Navbar.Collapse>
       </Container>
     </Navbar>
-    <Login handleShowSignUp={handleShowSignUp} show={showLogin} handleClose={handleCloseLogin}/>
+    <Login handleShowSignUp={handleShowSignUp}
+           show={showLogin} 
+           handleClose={handleCloseLogin}
+           auth={auth}
+           validate={validate}
+           login={login}
+           logout={logout}/>
     <SignUp  show={showSignUp} handleClose={handleCloseSignUp}/>
   </>
   );
