@@ -16,8 +16,8 @@ body {
 }
 
 .image-movie {
-	width: 150px;
-	height: 150px;
+  width: 150px;
+  height: 150px;
 }
 
 @media (max-width: 720px) {
@@ -31,3 +31,19 @@ body {
   background-color: blanchedalmond;
 }
 
+.containerError {
+  background-color: #fbfffe;
+  border-color: #fbfffe;
+  margin: 0%;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  background-size: 100% auto;
+  padding-bottom: 40px;
+}
+
+.titleError {
+  color: #96031a;
+  font-weight: 550;
+}
