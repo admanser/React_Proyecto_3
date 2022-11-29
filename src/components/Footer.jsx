@@ -15,14 +15,14 @@ const Footer = () => {
         <Col>
           <Row className="g-3 mt-3 mb-2 d-none d-md-block">
             <Row className="g-3">
-              <a className="" href="">
-                link1
+              <a className="" href="/Contact">
+                Contacto
               </a>
-              <a className="" href="">
-                link2
+              <a className="" href="/Favorites">
+                Favoritos
               </a>
-              <a className="" href="">
-                link3
+              <a className="" href="/AboutUs">
+                Nosotros
               </a>
             </Row>
           </Row>
