@@ -3,8 +3,9 @@ import { Navbar, Container, Nav, Form, Button } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import Login from "./Login";
 import SignUp from "./SignUp";
-import {toast, ToastContainer} from "react-toastify";
-const Navbar1 = ({ auth, validate, login, logout, loggedIn }) => {
+import {toast} from "react-toastify";
+
+const Navbar1 = ({ auth, validate, login, logout, loggedIn,loggedAdmin, setUserName}) => {
   const [showLogin, setShowLogin] = useState(false);
   const handleCloseLogin = () => setShowLogin(false);
   const handleShowLogin = () => setShowLogin(true);
@@ -14,7 +15,7 @@ const Navbar1 = ({ auth, validate, login, logout, loggedIn }) => {
   const handleShowSignUp = () => setShowSignUp(true);
 
   const handleLogout = () => {
-    logout(); toast ("Hasta pronto!")
+    logout(); toast ("Hasta pronto " + {setUserName})
   };
 
   return (
@@ -39,11 +40,16 @@ const Navbar1 = ({ auth, validate, login, logout, loggedIn }) => {
                 Favoritos
               </NavLink>
               <NavLink className="nav-link mt-1 me-4" to="/AboutUs">
-                About Us
+                Nosotros
               </NavLink>
-            </Nav>
+            {loggedAdmin()? (
+              <NavLink className="nav-link mt-1 me-4" to="/CrudMovies">
+                Editar
+              </NavLink>) : (null)}
 
+            </Nav>
             {loggedIn() ? (
+
               <Button className="mt-1 me-2" onClick={handleLogout}>
                 {" "}
                 Cerrar sesión

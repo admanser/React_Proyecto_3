@@ -26,6 +26,10 @@ function App() {
     return auth.user !== "";
   };
 
+  const loggedAdmin = ()=> {
+    return auth.role === "admin";
+  };
+
   const validate = (userName, pass) => {
     let userOk = false;
     let passOk = false;
@@ -60,6 +64,7 @@ function App() {
           login={login}
           logout={logout}
           loggedIn={loggedIn}
+          loggedAdmin={loggedAdmin}
         />
       </BrowserRouter>
     </>
