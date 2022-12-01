@@ -1,85 +1,72 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import  {Link}  from "react-router-dom";
 import { Row, Col, Container } from "react-bootstrap";
 
 const Footer = () => {
   return (
     <Container fluid className="m-0 px-0 mt-auto">
-      <Row
-        className="d-flex justify-content-center "
-        style={{ backgroundColor: "#FAA916" }}
-      >
-        <Col className="d-flex justify-content-center align-items-center">
-          <img src="/img/icons/logo.png" alt="logo.png" width={110} />
+      <Row style={{ backgroundColor: "#FAA916" }}>
+        <Col className="col-4 d-flex justify-content-center align-items-center">
+          <Link to="/"><img src="/img/icons/logo.png" alt="logo.png" width={110} /></Link>
         </Col>
         <Col>
-          <Row className="g-3 mt-3 mb-2 d-none d-md-block">
+          <Row className=" col-4 g-3 mt-3 mb-2 d-none d-md-block">
             <Row className="g-3">
-              <a className="" href="/Contact">
+              <Link className="" to="/Contact">
                 Contacto
-              </a>
-              <a className="" href="/Favorites">
+              </Link>
+              <Link className="" to="/Favorites">
                 Favoritos
-              </a>
-              <a className="" href="/AboutUs">
+              </Link>
+              <Link className="" to="/AboutUs">
                 Nosotros
-              </a>
+              </Link>
             </Row>
           </Row>
         </Col>
         <Col>
-          <Row className="mt-3  mb-2 d-none d-md-block">
+          <Row className="col-4 mt-3  mb-2 d-none d-md-block">
             <Row className="g-3">
-              <a href="">link4</a>
-              <a href="">link5</a>
-              <a href="">link6</a>
+              <Link href="">link4</Link>
+              <Link href="">link5</Link>
+              <Link href="">link6</Link>
             </Row>
           </Row>
         </Col>
-        <Col className="d-flex justify-content-center mt-2 me-2">
-          <div className="d-flex mt-3 mb-2">
-            <h3 className="col">
-              <a href="https://facebook.com" target={"_blank"} rel="noreferrer">
-                <img
-                  src="/img/icons/facebook.png"
-                  alt="Icono Facebook"
-                  width={45}
-                />
-              </a>
-            </h3>
-            <h3 className="col">
-              <a
-                href="https://instagram.com"
-                target={"_blank"}
-                rel="noreferrer"
-              >
-                <img
-                  src="/img/icons/instagram.png"
-                  alt="Icono Instagram"
-                  width={45}
-                />
-              </a>
-            </h3>
-            <h3 className="col">
-              <a href="https://twitter.com" target={"_blank"} rel="noreferrer">
-                <img
-                  src="/img/icons/twitter.png"
-                  alt="Icono Twitter"
-                  width={45}
-                />
-              </a>
-            </h3>
-            <h3 className="col">
-              <a href="https://youtube.com" target={"_blank"} rel="noreferrer">
-                <img
-                  src="/img/icons/youtube.png"
-                  alt="Icono Youtube"
-                  width={45}
-                />
-              </a>
-            </h3>
-          </div>
-        </Col>
+        <Col className="d-flex flex-column">
+          <Row className="col-4 mt-2 ">
+            <div className="d-flex mt-3 mb-2">
+              <h3 className="col-4">
+                <a href="https://facebook.com" target={"_blank"} rel="noreferrer">
+                  <img src="/img/icons/facebook.png" alt="Icono Facebook"
+                    width={35}
+                  />
+                </a>
+              </h3>
+              <h3 className="col-4 ms-4">
+                <a href="https://instagram.com" target={"_blank"} rel="noreferrer">
+                  <img src="/img/icons/instagram.png" alt="Icono Instagram" width={35}/>
+                </a>
+              </h3>
+              <h3 className="col-4 ms-4">
+                <a href="https://twitter.com" target={"_blank"} rel="noreferrer">
+                  <img src="/img/icons/twitter.png" alt="Icono Twitter" width={35}
+                  />
+                </a>
+              </h3>
+              <h3 className="col-4 ms-4">
+                <a href="https://youtube.com" target={"_blank"} rel="noreferrer">
+                  <img src="/img/icons/youtube.png" alt="Icono Youtube" width={35}
+                  />
+                </a>
+              </h3>
+            </div>
+          </Row>
+          <Col className="d-flex flex-column">
+            <h5 className="ms-4 mt-0">Contactanos</h5>
+            <h5 className=""><a href="https://rollingcodeschool.com/"> Rolling Code school</a></h5>
+          </Col>
+        </Col>  
       </Row>
       <Row>
         <h5 className="text-center bg-dark text-light py-2 m-0">

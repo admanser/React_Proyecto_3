@@ -23,11 +23,13 @@ const Login = ({ show, handleClose, handleShowSignUp, validate, login}) => {
       setUserName('');
       setPassword('');
       handleClose();
-      navigate ("/Contact")
-      toast('bienvenido/a ' + userName)
+      navigate ("/")
+      toast('bienvenido/a ' + userName,{autoClose:1000})
     }
+
+
     else if (!userNameOk || !passwordOk) {
-      toast('Datos ingresados incorrectos')
+      toast('Datos ingresados incorrectos',{autoClose:1000})
     }
   };
 
