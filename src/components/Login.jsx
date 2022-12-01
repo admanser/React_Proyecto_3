@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import {toast, ToastContainer} from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 
-const Login = ({ show, handleClose, handleShowSignUp, auth, validate, login, logout }) => {
+const Login = ({ show, handleClose, handleShowSignUp, validate, login}) => {
   const handleToggleModal = (evt) => {
     evt.preventDefault();
     handleClose();
@@ -24,7 +24,10 @@ const Login = ({ show, handleClose, handleShowSignUp, auth, validate, login, log
       setPassword('');
       handleClose();
       navigate ("/Contact")
-      toast('bienvenido ' + userName)
+      toast('bienvenido/a ' + userName)
+    }
+    else if (!userNameOk || !passwordOk) {
+      toast('Datos ingresados incorrectos')
     }
   };
 

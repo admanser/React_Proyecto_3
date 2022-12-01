@@ -3,6 +3,7 @@ import { Navbar, Container, Nav, Form, Button } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import Login from "./Login";
 import SignUp from "./SignUp";
+import {toast, ToastContainer} from "react-toastify";
 const Navbar1 = ({ auth, validate, login, logout, loggedIn }) => {
   const [showLogin, setShowLogin] = useState(false);
   const handleCloseLogin = () => setShowLogin(false);
@@ -13,7 +14,7 @@ const Navbar1 = ({ auth, validate, login, logout, loggedIn }) => {
   const handleShowSignUp = () => setShowSignUp(true);
 
   const handleLogout = () => {
-    logout();
+    logout(); toast ("Hasta pronto!")
   };
 
   return (
