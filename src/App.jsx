@@ -5,6 +5,7 @@ import "./css/globals.css";
 import "../src/css/signup.css";
 import "../src/css/contact.css";
 import { useEffect, useState } from "react";
+import { getDropdownMenuPlacement } from "react-bootstrap/esm/DropdownMenu";
 
 const USERS = [
   { userName: "admin", pass: "admin", role: "admin" },
@@ -29,14 +30,13 @@ function App() {
     let userOk = false;
     let passOk = false;
     const user = USERS.find((user) => user.userName === userName);
+
     if (user) {
       userOk = true;
       passOk = user.pass === pass;
     }
-
     return [userOk, passOk];
-  };
-
+  }
   const login = (userName) => {
     const userFound = USERS.find((user) => user.userName === userName);
     setAuth({
