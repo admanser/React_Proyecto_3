@@ -15,7 +15,7 @@ const RecoveryPass = () => {
       validationSchema={recoverySchema}
       onSubmit={onSubmit}
     >
-      {({ isSubmitting }) => (
+      {({ isSubmitting, resetForm }) => (
         <Form>
           <h2>Recuperar Contraseña</h2>
           <CustomInput
@@ -30,10 +30,20 @@ const RecoveryPass = () => {
             type="text"
             placeholder="mail@mail.com"
           />
+          <div direction="horizontal" gap={3}>
+            <button
+              id="btncancel"
+              type="reset"
+              variant="secondary"
+              onClick={resetForm}
+            >
+              Cancelar
+            </button>
 
-          <button id="btnsubmit" disabled={isSubmitting} type="submit">
-            Submit
-          </button>
+            <button id="btnsubmit" disabled={isSubmitting} type="submit">
+              Submit
+            </button>
+          </div>
         </Form>
       )}
     </Formik>
