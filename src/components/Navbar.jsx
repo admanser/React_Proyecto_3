@@ -32,18 +32,18 @@ const Navbar1 = ({ auth, validate, login, logout, loggedIn,loggedAdmin, setUserN
           </NavLink>
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
-            <Nav className="me-auto my-2 my-lg-0">
-              <NavLink className="nav-link mt-1" to="/Contact">
+            <Nav className="me-auto  my-lg-0">
+              <NavLink className="nav-link mt-1 foot" to="/Contact">
                 Contacto
               </NavLink>
-              <NavLink className="nav-link mt-1 me-4" to="/Favorites">
+              <NavLink className="nav-link mt-1 me-2 foot" to="/Favorites">
                 Favoritos
               </NavLink>
-              <NavLink className="nav-link mt-1 me-4" to="/AboutUs">
+              <NavLink className="nav-link mt-1 me-2 foot" to="/AboutUs">
                 Nosotros
               </NavLink>
             {loggedAdmin()? (
-              <NavLink className="nav-link mt-1 me-4" to="/CrudMovies">
+              <NavLink className="nav-link mt-1 me-4 foot" to="/CrudMovies">
                 Editar
               </NavLink>) : (null)}
 

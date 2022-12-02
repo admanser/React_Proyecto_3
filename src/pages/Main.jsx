@@ -26,7 +26,7 @@ const Main = ({ auth, validate, login, logout, loggedIn, loggedAdmin }) => {
         loggedAdmin={loggedAdmin}
       />
       <Navbar2 />
-      <Container fluid className="mt-0 d-flex flex-column min-vh-100">
+      <Container  className="mt-0 d-flex flex-column min-vh-100">
         <Routes>
           <Route path="/" element={<Landing />} />
           <Route path="/recoveryPass" element={<RecoveryPass />} />;
@@ -44,8 +44,8 @@ const Main = ({ auth, validate, login, logout, loggedIn, loggedAdmin }) => {
           <Route path="/movie/:id" element={<MovieDetailContainer />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
-        <Footer />
       </Container>
+      <Footer />
     </>
   );
 };

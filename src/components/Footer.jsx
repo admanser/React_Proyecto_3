@@ -7,18 +7,18 @@ const Footer = () => {
     <Container fluid className="m-0 px-0 mt-auto">
       <Row style={{ backgroundColor: "#FAA916" }}>
         <Col className="col-4 d-flex justify-content-center align-items-center">
-          <Link to="/"><img src="/img/icons/logo.png" alt="logo.png" width={110} /></Link>
+          <Link className="foot" to="/"><img className="foot" src="/img/icons/logo.png" alt="logo.png" width={110} /></Link>
         </Col>
         <Col>
           <Row className=" col-4 g-3 mt-3 mb-2 d-none d-md-block">
             <Row className="g-3">
-              <Link className="" to="/Contact">
+              <Link className="foot" to="/Contact">
                 Contacto
               </Link>
-              <Link className="" to="/Favorites">
+              <Link className="foot" to="/Favorites">
                 Favoritos
               </Link>
-              <Link className="" to="/AboutUs">
+              <Link className="foot" to="/AboutUs">
                 Nosotros
               </Link>
             </Row>
@@ -27,9 +27,9 @@ const Footer = () => {
         <Col>
           <Row className="col-4 mt-3  mb-2 d-none d-md-block">
             <Row className="g-3">
-              <Link href="">link4</Link>
-              <Link href="">link5</Link>
-              <Link href="">link6</Link>
+              <Link className="foot" href="">link4</Link>
+              <Link className="foot" href="">link5</Link>
+              <Link className="foot" href="">link6</Link>
             </Row>
           </Row>
         </Col>
@@ -64,7 +64,7 @@ const Footer = () => {
           </Row>
           <Col className="d-flex flex-column">
             <h5 className="ms-4 mt-0">Contactanos</h5>
-            <h5 className=""><a href="https://rollingcodeschool.com/"> Rolling Code school</a></h5>
+            <h5> <a className="foot" href="https://rollingcodeschool.com/"> Rolling Code school</a></h5>
           </Col>
         </Col>  
       </Row>
