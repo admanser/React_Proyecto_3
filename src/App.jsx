@@ -19,7 +19,7 @@ function App() {
   });
 
   useEffect(() => {
-    console.log(auth);
+
   }, [auth]);
 
   const loggedIn = () => {
@@ -65,6 +65,7 @@ function App() {
           logout={logout}
           loggedIn={loggedIn}
           loggedAdmin={loggedAdmin}
+          setAuth={setAuth}          
         />
       </BrowserRouter>
     </>

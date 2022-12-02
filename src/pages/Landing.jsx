@@ -11,7 +11,7 @@ const Landing = () => {
     <>
       <Hero />
       <Suscribite />
-      <ListMoviesContainer />
+      <ListMoviesContainer publicity/>
       <Advertising />
       <Category />
       <NextPremieres />

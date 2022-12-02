@@ -13,6 +13,7 @@ const Navbar1 = ({
   loggedIn,
   loggedAdmin,
   setUserName,
+  setAuth
 }) => {
   const [showLogin, setShowLogin] = useState(false);
   const handleCloseLogin = () => setShowLogin(false);
@@ -24,7 +25,7 @@ const Navbar1 = ({
 
   const handleLogout = () => {
     logout();
-    toast("Hasta pronto " + { setUserName });
+    toast("Hasta pronto");
   };
 
   return (
