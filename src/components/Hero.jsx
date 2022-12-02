@@ -1,16 +1,17 @@
-import React from 'react';
-import {Container} from 'react-bootstrap';
+import React from "react";
+import { Container } from "react-bootstrap";
 
 const Hero = () => {
   return (
-    <Container className='container'>
-        <img
-          className="d-block w-100"
-          src="https://img.freepik.com/vector-premium/presente-plantilla-nombre-espectaculo-asientos-vacios-rojos-cine-cine_22052-2168.jpg"
-          alt="First slide"
-        />
+    <Container fluid className="container-hero">
+      <img
+        fluid
+        className="d-block w-100 p-0 m-0"
+        src={require("../img/hero.jpg")}
+        alt="Imagen del hero"
+      />
     </Container>
-  )
-}
+  );
+};
 
-export default Hero
+export default Hero;

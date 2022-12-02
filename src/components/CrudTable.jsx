@@ -1,40 +1,39 @@
-import { Container } from 'react-bootstrap';
-import Table from 'react-bootstrap/Table';
-import React, {useState, useEffect } from 'react';
-import CrudRow from './CrudRow';
+import { Container } from "react-bootstrap";
+import Table from "react-bootstrap/Table";
+import React, { useState, useEffect } from "react";
+//import CrudRow from './CrudRow';
 
 const CrudTable = () => {
-
   const [data, setData] = useState([]);
 
-    useEffect(() => {
-      fetch('https://fakestoreapi.com/products')
-        .then(res => res.json())
-        .then(json => setData(json));
-    }, []);
+  useEffect(() => {
+    fetch("https://fakestoreapi.com/products")
+      .then((res) => res.json())
+      .then((json) => setData(json));
+  }, []);
 
   return (
     <Container>
-        <h2 className='mt-2 text-center'>Administrar Películas</h2>
-        <hr></hr>
-        <Table striped bordered hover size="sm">
+      <h2 className="mt-2 text-center">Administrar Películas</h2>
+      <hr></hr>
+      <Table striped bordered hover size="sm">
         <thead>
-            <tr>
+          <tr>
             <th>#</th>
             <th>Nombre</th>
             <th>Categoría</th>
             <th>Destacado</th>
             <th>Opciones</th>
-            </tr>
+          </tr>
         </thead>
         <tbody>
-        {console.log('datos'+data)}
-        {/* {data.map((d, i) => (
+          {console.log("datos" + data)}
+          {/* {data.map((d, i) => (
             <CrudRow d={d} key={'Movie' + i} />
               
         ))}
              */}
-              {/* <tr>
+          {/* <tr>
               <td>2</td>
               <td>Jacob</td>
               <td>Thornton</td>
@@ -46,7 +45,7 @@ const CrudTable = () => {
               <td><i className="fa-solid fa-star"></i></td>
             </tr> */}
         </tbody>
-        </Table>
+      </Table>
     </Container>
   );
 };
