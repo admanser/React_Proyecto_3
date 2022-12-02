@@ -88,3 +88,12 @@ body {
   top: 1rem;
 }
 
+.btn-cards.{
+  background-color: "#FAA916"; 
+}
+.btn-cards:hover {
+  background-color:blanchedalmond;  
+  transition: 2s;
+  text-decoration: none;
+}
+
