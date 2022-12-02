@@ -18,12 +18,12 @@ const SignUp = ({ show, handleClose }) => {
       validationSchema={singupSchema}
       onSubmit={onSubmit}
     >
-      {({ isSubmitting }) => (
+      {({ isSubmitting, resetForm }) => (
         <>
           <Modal show={show} onHide={handleClose}>
             <Modal.Header closeButton>
-              <Modal.Title className="text-dark">
-                Registro de Usuarios
+              <Modal.Title className="text-dark fw-bold p-2">
+                Registrarse
               </Modal.Title>
             </Modal.Header>
             <Modal.Body>
@@ -52,7 +52,10 @@ const SignUp = ({ show, handleClose }) => {
               </Form>
             </Modal.Body>
             <Modal.Footer>
-              <Button variant="secondary" onClick={handleClose}>
+              <Button
+                variant="secondary"
+                onClick={() => handleClose(resetForm())}
+              >
                 Cerrar
               </Button>
               <Button type="submit" variant="primary" disabled={isSubmitting}>

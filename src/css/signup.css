@@ -1,5 +1,3 @@
-/* @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap"); */
-
 .modal-content {
   background-color: #faa916;
 }
@@ -53,20 +51,18 @@ input[type="checkbox"] {
   margin-top: 0.25rem;
 }
 
-#btnsubmit {
-  display: block;
+#btnsubmit,
+#btncancel {
   padding: 0.35rem 0.5rem;
   background-color: #faa916;
   color: #000000;
   border: none;
   border-radius: 3px;
-  width: 50%;
+  width: 45%;
   font-size: 1rem;
   font-weight: bold;
   cursor: pointer;
-  margin: auto;
-  margin-top: 30px;
-  margin-bottom: 100px;
+  margin: 30px 5px 20px 5px;
 }
 
 h2 {
