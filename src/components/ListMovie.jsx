@@ -18,7 +18,7 @@ for (let number = 1; number <= 5; number++) {
 const ListMovie = props => {
   return (
     <Container className='mb-5'>
-        <h2 className='mt-4'>CARTELERA</h2>
+        <h1 className='mt-4 text-center'>CARTELERA</h1>
         <hr></hr>
         <p className='mb-5'>Mira nuestra nueva cartelera, las mejores películas están en nuestro blog.</p>
         <Row xs={2} md={3} xl={5} className="g-5">
