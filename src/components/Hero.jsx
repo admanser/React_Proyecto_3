@@ -1,51 +1,15 @@
 import React from 'react';
-import Carousel from 'react-bootstrap/Carousel';
+import {Container} from 'react-bootstrap';
 
 const Hero = () => {
   return (
-    <Carousel>
-      <Carousel.Item>
+    <Container className='container'>
         <img
           className="d-block w-100"
-          src="./slider1.jpg"
+          src="https://img.freepik.com/vector-premium/presente-plantilla-nombre-espectaculo-asientos-vacios-rojos-cine-cine_22052-2168.jpg"
           alt="First slide"
         />
-        <Carousel.Caption>
-          <div className='font-weight-bold'>
-            <h1>TITULO</h1>
-            <h3>Nulla vitae elit libero, a pharetra augue mollis interdum.</h3>
-          </div>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src="./slider2.jpg"
-          alt="Second slide"
-        />
-
-        <Carousel.Caption>
-          <div className='font-weight-bold'>
-            <h1>TITULO</h1>
-            <h3>Nulla vitae elit libero, a pharetra augue mollis interdum.</h3>
-          </div>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src="./slider3.jpg"
-          alt="Third slide"
-        />
-
-        <Carousel.Caption>
-          <div className='font-weight-bold'>
-            <h1>TITULO</h1>
-            <h3>Nulla vitae elit libero, a pharetra augue mollis interdum.</h3>
-          </div>
-        </Carousel.Caption>
-      </Carousel.Item>
-    </Carousel>
+    </Container>
   )
 }
 
