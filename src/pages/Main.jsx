@@ -14,7 +14,7 @@ import MovieDetailContainer from "../components/MovieDetailContainer";
 import CrudMovies from "../pages/CrudMovies"
 import SignUp from "../components/SignUp";
 
-const Main = ({ auth, validate, login, logout, loggedIn, loggedAdmin }) => {
+const Main = ({ auth, validate, login, logout, loggedIn, loggedAdmin, setAuth }) => {
   return (
     <>
       <Navbar
@@ -24,6 +24,7 @@ const Main = ({ auth, validate, login, logout, loggedIn, loggedAdmin }) => {
         logout={logout}
         loggedIn={loggedIn}
         loggedAdmin={loggedAdmin}
+        setAuth={setAuth}
       />
       <Navbar2 />
       <Container  className="mt-0 d-flex flex-column min-vh-100">
