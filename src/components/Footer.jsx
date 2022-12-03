@@ -1,5 +1,5 @@
 import React from "react";
-import  {Link}  from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Row, Col, Container } from "react-bootstrap";
 
 const Footer = () => {
@@ -7,7 +7,14 @@ const Footer = () => {
     <Container fluid className="m-0 px-0 mt-auto">
       <Row style={{ backgroundColor: "#FAA916" }}>
         <Col className="col-4 d-flex justify-content-center align-items-center">
-          <Link className="foot" to="/"><img className="foot" src="/img/icons/logo.png" alt="logo.png" width={110} /></Link>
+          <Link className="foot" to="/">
+            <img
+              className="foot"
+              src="/img/icons/logo.png"
+              alt="logo.png"
+              width={110}
+            />
+          </Link>
         </Col>
         <Col>
           <Row className=" col-4 g-3 mt-3 mb-2 d-none d-md-block">
@@ -27,9 +34,15 @@ const Footer = () => {
         <Col>
           <Row className="col-4 mt-3  mb-2 d-none d-md-block">
             <Row className="g-3">
-              <Link className="foot" href="">link4</Link>
-              <Link className="foot" href="">link5</Link>
-              <Link className="foot" href="">link6</Link>
+              <Link className="foot" href="">
+                link4
+              </Link>
+              <Link className="foot" href="">
+                link5
+              </Link>
+              <Link className="foot" href="">
+                link6
+              </Link>
             </Row>
           </Row>
         </Col>
@@ -37,26 +50,42 @@ const Footer = () => {
           <Row className="col-4 mt-2 ">
             <div className="d-flex mt-3 mb-2">
               <h3 className="col-4">
-                <a href="https://facebook.com" target={"_blank"} rel="noreferrer">
-                  <img src="/img/icons/facebook.png" alt="Icono Facebook"
+                <a href="https://facebook.com" target="_blank" rel="noreferrer">
+                  <img
+                    src="/img/icons/facebook.png"
+                    alt="Icono Facebook"
                     width={35}
                   />
                 </a>
               </h3>
               <h3 className="col-4 ms-4">
-                <a href="https://instagram.com" target={"_blank"} rel="noreferrer">
-                  <img src="/img/icons/instagram.png" alt="Icono Instagram" width={35}/>
-                </a>
-              </h3>
-              <h3 className="col-4 ms-4">
-                <a href="https://twitter.com" target={"_blank"} rel="noreferrer">
-                  <img src="/img/icons/twitter.png" alt="Icono Twitter" width={35}
+                <a
+                  href="https://instagram.com"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img
+                    src="/img/icons/instagram.png"
+                    alt="Icono Instagram"
+                    width={35}
                   />
                 </a>
               </h3>
               <h3 className="col-4 ms-4">
-                <a href="https://youtube.com" target={"_blank"} rel="noreferrer">
-                  <img src="/img/icons/youtube.png" alt="Icono Youtube" width={35}
+                <a href="https://twitter.com" target="_blank" rel="noreferrer">
+                  <img
+                    src="/img/icons/twitter.png"
+                    alt="Icono Twitter"
+                    width={35}
+                  />
+                </a>
+              </h3>
+              <h3 className="col-4 ms-4">
+                <a href="https://youtube.com" target="_blank" rel="noreferrer">
+                  <img
+                    src="/img/icons/youtube.png"
+                    alt="Icono Youtube"
+                    width={35}
                   />
                 </a>
               </h3>
@@ -64,9 +93,15 @@ const Footer = () => {
           </Row>
           <Col className="d-flex flex-column">
             <h5 className="ms-4 mt-0">Contactanos</h5>
-            <h5> <a className="foot" href="https://rollingcodeschool.com/"> Rolling Code school</a></h5>
+            <h5>
+              {" "}
+              <a className="foot" href="https://rollingcodeschool.com/">
+                {" "}
+                Rolling Code school
+              </a>
+            </h5>
           </Col>
-        </Col>  
+        </Col>
       </Row>
       <Row>
         <h5 className="text-center bg-dark text-light py-2 m-0">

@@ -1,6 +1,6 @@
 import React from "react";
-import { /*Navbar,*/ Container, /*Nav,*/ Form, Button } from "react-bootstrap";
-import /*NavLink*/ "react-router-dom";
+import { Container, Form, Button } from "react-bootstrap";
+// import /*NavLink*/ "react-router-dom";
 
 const Navbar2 = () => {
   return (
@@ -17,24 +17,44 @@ const Navbar2 = () => {
         </Form>
         <div />
         <div className="row ms-auto mt-2 me-2">
-          <a className="col-3" href="https://facebook.com">
+          <a
+            className="col-3"
+            href="https://facebook.com"
+            target="_blank"
+            rel="noreferrer"
+          >
             <img
               src="/img/icons/facebook.png"
               alt="Icono Facebook"
               width={35}
             />
           </a>
-          <a className="col-3" href="https://instagram.com">
+          <a
+            className="col-3"
+            href="https://instagram.com"
+            target="_blank"
+            rel="noreferrer"
+          >
             <img
               src="/img/icons/instagram.png"
               alt="Icono Instagram"
               width={35}
             />
           </a>
-          <a className="col-3" href="https://twitter.com">
+          <a
+            className="col-3"
+            href="https://twitter.com"
+            target="_blank"
+            rel="noreferrer"
+          >
             <img src="/img/icons/twitter.png" alt="Icono Twitter" width={35} />
           </a>
-          <a className="col-3" href="https://youtube.com">
+          <a
+            className="col-3"
+            href="https://youtube.com"
+            target="_blank"
+            rel="noreferrer"
+          >
             <img src="/img/icons/youtube.png" alt="Icono Youtube" width={35} />
           </a>
         </div>
