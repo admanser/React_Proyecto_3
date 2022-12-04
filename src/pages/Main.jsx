@@ -13,6 +13,7 @@ import Navbar2 from "../components/Navbar2";
 import MovieDetailContainer from "../components/MovieDetailContainer";
 import CrudMovies from "../pages/CrudMovies"
 import SignUp from "../components/SignUp";
+import ListCategoryContainer from "../components/ListCategoryContainer";
 
 const Main = ({ auth, validate, login, logout, loggedIn, loggedAdmin, setAuth }) => {
   return (
@@ -42,7 +43,8 @@ const Main = ({ auth, validate, login, logout, loggedIn, loggedAdmin, setAuth })
           />
           <Route path="/Contact" element={<Contact />} />
           <Route path="/AboutUs" element={<AboutUs />} />
-          <Route path="/movie/:id" element={<MovieDetailContainer />} />
+          <Route path="/MovieDetailContainer/:id" element={<MovieDetailContainer />} />
+          <Route path="/ListCategoryContainer/:category" element={<ListCategoryContainer />}/>
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Container>

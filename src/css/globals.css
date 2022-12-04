@@ -18,7 +18,7 @@ body {
 
 .width-col {
   display: grid;
-  grid-template-columns: 250px 400px 500px;
+  grid-template-columns: 320px 300px 500px;
 }
 .nav1 {
   background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/b402d7f7-c4c1-49a2-bb94-efc966c1f884/d5nft8z-e112d83c-f877-4f3b-bd34-3ad78524c429.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2I0MDJkN2Y3LWM0YzEtNDlhMi1iYjk0LWVmYzk2NmMxZjg4NFwvZDVuZnQ4ei1lMTEyZDgzYy1mODc3LTRmM2ItYmQzNC0zYWQ3ODUyNGM0MjkucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.8NH5ZBn8JzBmkf0O6lYkUeV4vFWSYe_7YY0UTF1WAU0);
