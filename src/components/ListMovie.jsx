@@ -22,15 +22,15 @@ const ListMovie = (props) => {
       <hr></hr>
       <h3 className="mb-5 text-center"> Mira nuestra nueva cartelera, las mejores películas están en nuestro blog. </h3>
       <Col className="d-flex justify-content-center mt-0 col-12"> 
-        <Row xs={2} md={3} xl={5} className=" mt-0 col-12 col-md-9">
+        <Row xs={2} md={3} xl={5} className="col-12 col-md-9">
               {props.data.map((d, i) => (
           <Movie d={d} key={"Movie" + i} /> ))}
-            <div className="d-flex text-center mt-4">
+            <div className="d-flex text-center">
               <Pagination className="justify-content-center">{items}</Pagination>
               <br />
             </div>
         </Row>    
-        <Row className="d-none d-lg-block   ms-3 mt-4"><Publicity/>
+        <Row className="d-none d-lg-block ms-3 mt-4"><Publicity/>
         </Row>
       </Col> 
     </Container>
