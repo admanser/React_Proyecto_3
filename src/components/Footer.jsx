@@ -4,15 +4,15 @@ import { Row, Col, Container } from "react-bootstrap";
 
 const Footer = () => {
   return (
-    <Container fluid className="m-0 px-0 mt-auto">
+    <Container fluid className="">
       <Row style={{ backgroundColor: "#FAA916" }}>
-        <Col className="col-4 d-flex justify-content-center align-items-center">
+        <Col className="col-3 d-flex justify-content-center align-items-center">
           <Link className="foot" to="/">
             <img
               className="foot"
               src="/img/icons/logo.png"
               alt="logo.png"
-              width={110}
+              width={100}
             />
           </Link>
         </Col>
@@ -32,7 +32,7 @@ const Footer = () => {
           </Row>
         </Col>
         <Col>
-          <Row className="col-4 mt-3  mb-2 d-none d-md-block">
+          <Row className="col-4 mt-3 mb-2 d-none d-md-block">
             <Row className="g-3">
               <Link className="foot" href="">
                 link4
@@ -54,7 +54,7 @@ const Footer = () => {
                   <img
                     src="/img/icons/facebook.png"
                     alt="Icono Facebook"
-                    width={35}
+                    width={30}
                   />
                 </a>
               </h3>
@@ -67,7 +67,7 @@ const Footer = () => {
                   <img
                     src="/img/icons/instagram.png"
                     alt="Icono Instagram"
-                    width={35}
+                    width={30}
                   />
                 </a>
               </h3>
@@ -76,7 +76,7 @@ const Footer = () => {
                   <img
                     src="/img/icons/twitter.png"
                     alt="Icono Twitter"
-                    width={35}
+                    width={30}
                   />
                 </a>
               </h3>
@@ -85,7 +85,7 @@ const Footer = () => {
                   <img
                     src="/img/icons/youtube.png"
                     alt="Icono Youtube"
-                    width={35}
+                    width={30}
                   />
                 </a>
               </h3>
