@@ -110,3 +110,16 @@ body {
   transition: 2s;
   text-decoration: none;
 }
+
+.btn-nav {
+  background-color: #faa916;
+  text-decoration: none;
+  border: 0;
+}
+
+.btn-nav:hover {
+  color: white;
+  background-color: blanchedalmond;
+  transition: 2s;
+  text-decoration: none;
+}

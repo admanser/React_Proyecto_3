@@ -1,12 +1,12 @@
 import React from 'react';
-import { Col, Container, Row, Card } from 'react-bootstrap';
+import { Col, Container, Row, Card, Button } from 'react-bootstrap';
 import Ratio from 'react-bootstrap/Ratio';
 import { Link } from 'react-router-dom';
 
 const Category = () => {
   return (
     <Container className='mb-5'>
-         <h2 className='mt-2'>CATEGORIAS</h2>
+         <h3 style={{textDecoration : "none"}} className='mt-2 text-center'>CATEGORIAS</h3>
          <hr></hr>
         <Row className='mb-5'>
         </Row>
@@ -17,8 +17,8 @@ const Category = () => {
                         <Card style={{ width: '15rem' }}>
                             <Card.Img variant="top" src="./img/slider1.jpg" />
                             <Card.Body>
-                            <Link to='/ListCategoryContainer/Comedia'>
-                                <Card.Title>Comedias</Card.Title>
+                            <Link style={{textDecoration : "none"}} to='/ListCategoryContainer/Comedia'>
+                                <Button className='d-flex ms-auto btn-cards'>Comedias</Button>
                             </Link>    
                             </Card.Body>
                         </Card>
@@ -27,8 +27,8 @@ const Category = () => {
                         <Card style={{ width: '15rem' }}>
                             <Card.Img variant="top" src="./img/slider2.jpg" />
                             <Card.Body>
-                            <Link to='/ListCategoryContainer/Acción'>   
-                                <Card.Title>Acción</Card.Title>
+                            <Link style={{textDecoration : "none"}} to='/ListCategoryContainer/Acción'>   
+                                <Button className='d-flex ms-auto btn-cards'>Acción</Button>
                             </Link>
                             </Card.Body>
                         </Card>
@@ -37,18 +37,18 @@ const Category = () => {
                         <Card style={{ width: '15rem' }}>
                             <Card.Img variant="top" src="./img/slider3.jpg" />
                             <Card.Body>
-                            <Link to='/ListCategoryContainer/Drama'>  
-                                <Card.Title>Drama</Card.Title>
+                            <Link style={{textDecoration : "none"}} to='/ListCategoryContainer/Drama'>  
+                                <Button className='d-flex ms-auto btn-cards'>Drama</Button>
                             </Link>
                             </Card.Body>
                         </Card>
                     </Col>
-                    <Col className="mb-4 d-flex justify-content-center">
+                    <Col className="mb-4 d-flex justify-content-center ">
                         <Card style={{ width: '15rem' }}>
                             <Card.Img variant="top" src="./img/slider1.jpg" />
                             <Card.Body>
-                            <Link to='/ListCategoryContainer/Suspenso'>
-                                <Card.Title>Suspenso</Card.Title>
+                            <Link style={{textDecoration : "none"}} to='/ListCategoryContainer/Suspenso'>
+                                <Button className='d-flex ms-auto btn-cards '>Suspenso</Button>
                             </Link>
                             </Card.Body>
                         </Card>

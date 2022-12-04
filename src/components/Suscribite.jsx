@@ -1,6 +1,5 @@
 import { React, useState, useEffect } from "react";
 import CloseButton from "react-bootstrap/CloseButton";
-import {Button} from "react-bootstrap"
 
 const Suscribite = () => {
   const [modal, setModal] = useState("hidden");
@@ -14,10 +13,10 @@ const Suscribite = () => {
   }, []);
 
   return (
-    <div style={{ visibility: modal }} className="modal d-none d-md-flex">
+    <div style={{ visibility: modal }} className="modal d-md-flex">
       <div className="contenido">
         <div className="fondito d-flex justify-centent-center align-items-center">
-          <Button variant="danger lg" className="btn-lg"> Suscribete!</Button>
+          <h3 variant="danger lg" className="text-danger"> Suscribete!</h3>
           <CloseButton
             onClick={() => {
               setModal("hidden");

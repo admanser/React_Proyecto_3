@@ -10,7 +10,7 @@ const Landing = () => {
   return (
     <>
       <Hero />
-      <Suscribite />
+      <Suscribite/>
       <ListMoviesContainer publicity/>
       <Advertising />
       <Category />
