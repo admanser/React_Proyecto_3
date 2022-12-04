@@ -4,6 +4,7 @@ import { NavLink } from "react-router-dom";
 import Login from "./Login";
 import SignUp from "./SignUp";
 import { toast } from "react-toastify";
+import Logo from "../img/Logo.png";
 
 const Navbar1 = ({
   auth,
@@ -13,7 +14,7 @@ const Navbar1 = ({
   loggedIn,
   loggedAdmin,
   setUserName,
-  setAuth
+  setAuth,
 }) => {
   const [showLogin, setShowLogin] = useState(false);
   const handleCloseLogin = () => setShowLogin(false);
@@ -38,7 +39,7 @@ const Navbar1 = ({
       >
         <Container className="col-12 col-md-12">
           <NavLink className="me-3" to="/">
-            <img src="/img/icons/logo.png" alt="logo.png" width={50} />
+            <img src={Logo} alt="logo.png" width={50} />
           </NavLink>
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
