@@ -13,6 +13,7 @@ import MovieDetailContainer from "../components/MovieDetailContainer";
 import CrudMovies from "../pages/CrudMovies";
 import SignUp from "../components/SignUp";
 import ListCategoryContainer from "../components/ListCategoryContainer";
+import Suscribite from "../components/Suscribite";
 
 const Main = ({
   auth,
@@ -37,7 +38,7 @@ const Main = ({
       <Navbar2 />
       <div className="mt-0 d-flex flex-column min-vh-100">
         <Routes>
-          <Route path="/" element={<Landing />} />
+          <Route path="/" element={<Landing/>}  />
           <Route path="/recoveryPass" element={<RecoveryPass />} />;
           <Route
             path="/Favorites"
@@ -52,8 +53,7 @@ const Main = ({
           ;
           <Route
             path="CrudMovies"
-            element={auth.role === "admin" ? <CrudMovies /> : <NotFound />}
-          />
+            element={auth.role === "admin" ? <CrudMovies /> : <NotFound />}/>
           <Route path="/Contact" element={<Contact />} />
           <Route path="/AboutUs" element={<AboutUs />} />
           <Route path="/MovieDetailContainer/:id" element={<MovieDetailContainer />} />

@@ -39,15 +39,15 @@ const Navbar1 = ({
       >
         <Container className="col-12 col-md-12">
           <NavLink className="me-3" to="/">
-            <img src={Logo} alt="logo.png" width={50} />
+            <img  src={Logo} alt="logo.png" width={50} />
           </NavLink>
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
             <Nav className="me-auto  my-lg-0">
-              <NavLink className="nav-link mt-1 foot" to="/Contact">
+              <NavLink className="nav-link mt-1 foot " to="/Contact">
                 Contacto
               </NavLink>
-              <NavLink className="nav-link mt-1 me-2 foot" to="/Favorites">
+              <NavLink className="nav-link mt-1 me-2 foot " to="/Favorites">
                 Favoritos
               </NavLink>
               <NavLink className="nav-link mt-1 me-2 foot" to="/AboutUs">
@@ -60,16 +60,16 @@ const Navbar1 = ({
               ) : null}
             </Nav>
             {loggedIn() ? (
-              <Button className="mt-1 me-2" onClick={handleLogout}>
+              <Button className="mt-1 me-2 btn-nav text-dark" onClick={handleLogout}>
                 {" "}
                 Cerrar sesión
               </Button>
             ) : (
               <>
-                <Button className="mt-1 me-2" onClick={handleShowSignUp}>
+                <Button className="mt-1 me-2 btn-nav text-dark" onClick={handleShowSignUp}>
                   Registrarse
                 </Button>
-                <Button className="mt-1 me-2" onClick={handleShowLogin}>
+                <Button className="mt-1 me-2 btn-nav text-dark" onClick={handleShowLogin}>
                   Iniciar sesión
                 </Button>
               </>
