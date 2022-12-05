@@ -60,6 +60,18 @@ body {
   width: 50%;
 }
 
+.page-crud {
+  background-color: #fbfffe;
+}
+
+.crud {
+  margin-top: 5%;
+}
+
+.crud-table {
+  margin-bottom: 5%;
+}
+
 @media (max-width: 720px) {
   .width-col {
     display: block;

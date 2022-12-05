@@ -13,7 +13,7 @@ const CrudTable = () => {
   }, []);
 
   return (
-    <Container>
+    <Container className="crud-table">
       <h2 className="mt-2 text-center">Administrar Películas</h2>
       <hr></hr>
       <Table striped bordered hover size="sm">
