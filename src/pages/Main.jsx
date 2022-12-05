@@ -16,26 +16,24 @@ import ListCategoryContainer from "../components/ListCategoryContainer";
 // import Suscribite from "../components/Suscribite";
 
 const Main = ({
-  auth,
+  currentUser,
   validate,
   login,
   logout,
   loggedIn,
-  loggedAdmin,
-  setAuth,
+  loggedAdmin
 }) => {
   const [searchMovies, setSearchMovies] = useState('');
 
   return (
     <>
       <Navbar
-        auth={auth}
+        currentUser={currentUser}
         validate={validate}
         login={login}
         logout={logout}
         loggedIn={loggedIn}
         loggedAdmin={loggedAdmin}
-        setAuth={setAuth}
       />
       <Navbar2 searchMovies={searchMovies} setSearchMovies={setSearchMovies} />
       <div className="mt-0 d-flex flex-column min-vh-100">
@@ -45,7 +43,7 @@ const Main = ({
           <Route
             path="/Favorites"
             element={
-              auth.userName ? (
+              loggedIn() ? (
                 <Favorites />
               ) : (
                 <NotFound message="Primero debes loguearte" />
@@ -55,8 +53,7 @@ const Main = ({
           ;
           <Route
             path="CrudMovies"
-            element={auth.role === "admin" ? <CrudMovies /> : <NotFound />}
-          />
+            element={loggedAdmin() ? <CrudMovies /> : <NotFound />}/>
           <Route path="/Contact" element={<Contact />} />
           <Route path="/AboutUs" element={<AboutUs />} />
           <Route
