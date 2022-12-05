@@ -1,4 +1,5 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
+import { toast } from "react-toastify";
 
 const CrudForm = () => {
   const [name, setName] = useState("");
@@ -11,35 +12,36 @@ const CrudForm = () => {
   const [trailer, setTrailer] = useState("");
   const [argument, setArgument] = useState("");
 
-  const handleChange = (e) => {};
+  // const handleChange = (e) => {};
 
   const handleClick = (e) => {
-    const movie = {};
+    e.preventDefault();
+    toast.success("Registro cargado");
   };
 
   const handleReset = (e) => {};
 
-  useEffect(() => {
-    console.log(name);
-    console.log(year);
-    console.log(category);
-    console.log(directedby);
-    console.log(actors);
-    console.log(story);
-    console.log(image);
-    console.log(trailer);
-    console.log(argument);
-  }, [
-    name,
-    year,
-    category,
-    directedby,
-    actors,
-    story,
-    image,
-    trailer,
-    argument,
-  ]);
+  // useEffect(() => {
+  //   console.log(name);
+  //   console.log(year);
+  //   console.log(category);
+  //   console.log(directedby);
+  //   console.log(actors);
+  //   console.log(story);
+  //   console.log(image);
+  //   console.log(trailer);
+  //   console.log(argument);
+  // }, [
+  //   name,
+  //   year,
+  //   category,
+  //   directedby,
+  //   actors,
+  //   story,
+  //   image,
+  //   trailer,
+  //   argument,
+  // ]);
 
   return (
     <div className="crud">
@@ -132,7 +134,7 @@ const CrudForm = () => {
         ></textarea>
         <br />
         <br />
-        <input type="submit" value="Enviar" onClick={handleClick} />
+        <input type="submit" value="Enviar" onClick={(e) => handleClick(e)} />
         <br />
         <br />
         <input type="reset" value="Limpiar" onClick={handleReset} />

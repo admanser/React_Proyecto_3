@@ -50,7 +50,7 @@ const Contact = () => {
 
             return errores;
           }}
-          onSubmit={(valores, { resetForm }) => {
+          onClick={(valores, { resetForm }) => {
             resetForm();
             console.log("Formulario enviado");
             cambiarFormularioEnviado(true);

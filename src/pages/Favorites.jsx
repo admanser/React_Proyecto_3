@@ -1,9 +1,14 @@
-import React from 'react'
+import React from "react";
+import Category from "../components/Category";
+import ListMoviesContainer from "../components/ListMoviesContainer";
 
-const Favorites = () => {
+const Favorites = ({ searchMovies }) => {
   return (
-    <div className='mt-4'>Favorites</div>
-  )
-}
+    <div className="mt-4">
+      <ListMoviesContainer searchMovies={searchMovies} />
+      <Category />
+    </div>
+  );
+};
 
-export default Favorites
+export default Favorites;
