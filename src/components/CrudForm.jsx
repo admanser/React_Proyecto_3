@@ -2,29 +2,49 @@ import { useState, useEffect } from "react";
 
 const CrudForm = () => {
   const [name, setName] = useState("");
+  const [year, setYear] = useState("");
   const [category, setCategory] = useState("");
+  const [directedby, setDirectedby] = useState("");
+  const [actors, setActors] = useState("");
+  const [story, setStory] = useState("");
   const [image, setImage] = useState("");
   const [trailer, setTrailer] = useState("");
   const [argument, setArgument] = useState("");
 
   const handleChange = (e) => {};
 
-  const handleSubmit = (e) => {};
+  const handleClick = (e) => {
+    const movie = {};
+  };
 
   const handleReset = (e) => {};
 
   useEffect(() => {
     console.log(name);
+    console.log(year);
     console.log(category);
+    console.log(directedby);
+    console.log(actors);
+    console.log(story);
     console.log(image);
     console.log(trailer);
     console.log(argument);
-  }, [name, category, image, trailer, argument]);
+  }, [
+    name,
+    year,
+    category,
+    directedby,
+    actors,
+    story,
+    image,
+    trailer,
+    argument,
+  ]);
 
   return (
     <div className="crud">
       <h2 className="text-center">AGREGAR NUEVA PELÍCULA</h2>
-      <form onSubmit={handleSubmit} className="form-size mb-5">
+      <form onSubmit={handleClick} className="form-size mb-5">
         <input
           type="text"
           name="name"
@@ -33,18 +53,55 @@ const CrudForm = () => {
           value={name}
         />
         <br />
+        <br />
+        <input
+          type="text"
+          name="year"
+          placeholder="Ingrese año de película"
+          onInput={(e) => setYear(e.target.value)}
+          value={year}
+        />
+        <br />
+        <br />
         <label for="category">Seleccione Categoría:</label>
         <select
           name="category"
           id="category"
           value={category}
-          onSelect={(e) => setCategory(e.target.value)}
+          onChange={(e) => setCategory(e.target.value)}
         >
           <option value="comedia">Comedia</option>
           <option value="drama">Drama</option>
           <option value="accion">Acción</option>
           <option value="ficcion">Ciencia Ficción</option>
         </select>
+        <br />
+        <br />
+        <input
+          type="text"
+          name="directedby"
+          placeholder="Ingrese director de la película"
+          onInput={(e) => setDirectedby(e.target.value)}
+          value={directedby}
+        />
+        <br />
+        <br />
+        <input
+          type="text"
+          name="actors"
+          placeholder="Ingrese actores de película"
+          onInput={(e) => setActors(e.target.value)}
+          value={actors}
+        />
+        <br />
+        <br />
+        <input
+          type="text"
+          name="story"
+          placeholder="Ingrese resumen de la película"
+          onInput={(e) => setStory(e.target.value)}
+          value={story}
+        />
         <br />
         <br />
         <input
@@ -75,7 +132,7 @@ const CrudForm = () => {
         ></textarea>
         <br />
         <br />
-        <input type="submit" value="Enviar" />
+        <input type="submit" value="Enviar" onClick={handleClick} />
         <br />
         <br />
         <input type="reset" value="Limpiar" onClick={handleReset} />
