@@ -1,13 +1,25 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const CrudForm = () => {
-  const [form /*, setForm*/] = useState([]);
+  const [name, setName] = useState("");
+  const [category, setCategory] = useState("");
+  const [image, setImage] = useState("");
+  const [trailer, setTrailer] = useState("");
+  const [argument, setArgument] = useState("");
 
   const handleChange = (e) => {};
 
   const handleSubmit = (e) => {};
 
   const handleReset = (e) => {};
+
+  useEffect(() => {
+    console.log(name);
+    console.log(category);
+    console.log(image);
+    console.log(trailer);
+    console.log(argument);
+  }, [name, category, image, trailer, argument]);
 
   return (
     <div className="crud">
@@ -17,32 +29,39 @@ const CrudForm = () => {
           type="text"
           name="name"
           placeholder="Ingrese nombre de película"
-          onChange={handleChange}
-          value={form.name}
+          onInput={(e) => setName(e.target.value)}
+          value={name}
         />
         <br />
-        <label for="cars">Seleccione Categoría:</label>
-        <select name="category" id="category" value={form.category}>
-          <option value="volvo">Comedias</option>
-          <option value="saab">Drama</option>
-          <option value="mercedes">Acción</option>
-          <option value="audi">Ciencia Ficción</option>
+        <label for="category">Seleccione Categoría:</label>
+        <select
+          name="category"
+          id="category"
+          value={category}
+          onSelect={(e) => setCategory(e.target.value)}
+        >
+          <option value="comedia">Comedia</option>
+          <option value="drama">Drama</option>
+          <option value="accion">Acción</option>
+          <option value="ficcion">Ciencia Ficción</option>
         </select>
         <br />
         <br />
         <input
           type="text"
-          name="url-image"
+          name="image"
           placeholder="URL de la imagen de portada"
-          value={form.image}
+          onInput={(e) => setImage(e.target.value)}
+          value={image}
         />
         <br />
         <br />
         <input
           type="text"
-          name="url-trailer"
+          name="trailer"
           placeholder="URL del Trailer"
-          value={form.trailer}
+          onInput={(e) => setTrailer(e.target.value)}
+          value={trailer}
         />
         <br />
         <br />
@@ -51,6 +70,8 @@ const CrudForm = () => {
           for="argument"
           placeholder="Describe brevemente el argumento en menos de 300 carácteres"
           maxlength="300"
+          onChange={(e) => setArgument(e.target.value)}
+          value={argument}
         ></textarea>
         <br />
         <br />
