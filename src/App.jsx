@@ -5,7 +5,9 @@ import "./css/globals.css";
 import "../src/css/signup.css";
 import "../src/css/contact.css";
 import "../src/css/nosotros.css";
-import { useEffect, useState } from "react";
+import { useState } from "react";
+
+import { decodeToken } from "react-jwt";
 //import { getDropdownMenuPlacement } from "react-bootstrap/esm/DropdownMenu";
 
 const USERS = [
@@ -14,57 +16,42 @@ const USERS = [
 ];
 
 function App() {
-  const [auth, setAuth] = useState({
-    user: "",
-    role: "",
-  });
-
-  useEffect(() => {}, [auth]);
+  const [token, setToken] = useState(null);
 
   const loggedIn = () => {
-    return auth.user !== "";
+    return token !== null;
   };
+
+  const currentUser = () => {
+    return loggedIn() && decodeToken(token);
+  }
 
   const loggedAdmin = () => {
-    return auth.role === "admin";
-  };
-
-  const validate = (userName, pass) => {
-    let userOk = false;
-    let passOk = false;
-    const user = USERS.find((user) => user.userName === userName);
-
-    if (user) {
-      userOk = true;
-      passOk = user.pass === pass;
+    if (loggedIn()) {
+      console.log(currentUser())
+      return currentUser().role;
     }
-    return [userOk, passOk];
+
+    return false;
   };
-  const login = (userName) => {
-    const userFound = USERS.find((user) => user.userName === userName);
-    setAuth({
-      userName: userFound.userName,
-      role: userFound.role,
-    });
+
+  const login = (newToken) => {
+    setToken(newToken);
   };
+
   const logout = () => {
-    setAuth({
-      user: "",
-      role: "",
-    });
+    setToken(null);
   };
 
   return (
     <>
       <BrowserRouter>
         <Main
-          auth={auth}
-          validate={validate}
+          currentUser={currentUser}
           login={login}
           logout={logout}
           loggedIn={loggedIn}
           loggedAdmin={loggedAdmin}
-          setAuth={setAuth}
         />
       </BrowserRouter>
     </>

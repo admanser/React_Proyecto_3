@@ -1,24 +1,37 @@
 import React from "react";
-import { Button, Modal } from "react-bootstrap";
+import { Button, Modal, Stack } from "react-bootstrap";
 import { Form, Formik } from "formik";
 import { singupSchema } from "../schemas";
 import CustomRePass from "./CustomRePass";
 import CustomInput from "./CustomInput";
 import CustomPass from "./CustomPass";
 
-const onSubmit = async (actions) => {
-  await new Promise((resolve) => setTimeout(resolve, 1000));
+const onSubmit = async (values, actions) => {
+  // const rs = await fetch('https://backend-proyecto3-cpzv4av54-admanser.vercel.app/users/register', {
+  const rs = await fetch('http://localhost:3001/users/register', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      name: values.name,
+      mail: values.mail,
+      password: values.password
+    })
+  });
+  const response = await rs.json();
+  console.log('response', response)
   actions.resetForm();
 };
 
 const SignUp = ({ show, handleClose }) => {
   return (
     <Formik
-      initialValues={{ username: "", password: "", confirmpass: "" }}
+      initialValues={{ name: "", mail: "", password: "", confirmpass: "" }}
       validationSchema={singupSchema}
       onSubmit={onSubmit}
     >
-      {({ isSubmitting, resetForm }) => (
+      {({ isSubmitting, resetForm, handleSubmit }) => (
         <>
           <Modal show={show} onHide={handleClose}>
             <Modal.Header closeButton>
@@ -26,13 +39,19 @@ const SignUp = ({ show, handleClose }) => {
                 Registrarse
               </Modal.Title>
             </Modal.Header>
-            <Modal.Body>
-              <Form>
+            <Form onSubmit={handleSubmit}>
+              <Modal.Body>
                 <CustomInput
                   label="Usuario"
-                  name="username"
+                  name="name"
                   type="text"
                   placeholder="Bruno Díaz"
+                />
+                <CustomInput
+                  label="Mail"
+                  name="mail"
+                  type="email"
+                  placeholder="bruno@mail.com"
                 />
                 <CustomPass
                   label="Contraseña"
@@ -49,19 +68,19 @@ const SignUp = ({ show, handleClose }) => {
                 {/* <button disabled={isSubmitting} type="submit" className="mt-5">
                   Submit
                 </button> */}
-              </Form>
-            </Modal.Body>
-            <Modal.Footer>
-              <Button
-                variant="secondary"
-                onClick={() => handleClose(resetForm())}
-              >
-                Cerrar
-              </Button>
-              <Button type="submit" variant="primary" disabled={isSubmitting}>
-                Crear Cuenta
-              </Button>
-            </Modal.Footer>
+              </Modal.Body>
+              <Modal.Footer>
+                <Button
+                  variant="secondary"
+                  onClick={() => handleClose(resetForm())}
+                  >
+                  Cerrar
+                </Button>
+                <Button type="submit" variant="primary" disabled={isSubmitting}>
+                  Crear Cuenta
+                </Button>
+              </Modal.Footer>
+            </Form>
           </Modal>
         </>
       )}

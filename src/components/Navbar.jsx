@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Navbar, Container, Nav /*, Form*/, Button } from "react-bootstrap";
+import { Navbar, Container, Nav /*, Form*/, Button, Stack } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import Login from "./Login";
 import SignUp from "./SignUp";
@@ -7,14 +7,11 @@ import { toast } from "react-toastify";
 import Logo from "../img/Logo.png";
 
 const Navbar1 = ({
-  auth,
-  validate,
+  currentUser,
   login,
   logout,
   loggedIn,
   loggedAdmin,
-  setUserName,
-  setAuth,
 }) => {
   const [showLogin, setShowLogin] = useState(false);
   const handleCloseLogin = () => setShowLogin(false);
@@ -61,7 +58,7 @@ const Navbar1 = ({
             </Nav>
             {loggedIn() ? (
               <Button className="mt-1 me-2 btn-nav text-dark" onClick={handleLogout}>
-                {" "}
+                <span className="me-2">({currentUser().name})</span>
                 Cerrar sesión
               </Button>
             ) : (
@@ -81,8 +78,6 @@ const Navbar1 = ({
         handleShowSignUp={handleShowSignUp}
         show={showLogin}
         handleClose={handleCloseLogin}
-        auth={auth}
-        validate={validate}
         login={login}
         logout={logout}
       />

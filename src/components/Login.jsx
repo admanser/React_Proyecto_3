@@ -1,96 +1,101 @@
-import React, { useState } from "react";
+import React from "react";
 import { Button, Modal, Form } from "react-bootstrap";
+import { Form as FormFormik, Formik } from "formik";
+import { loginSchema } from "../schemas";
 import { Link, useNavigate } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import CustomInput from "./CustomInput";
+import CustomPass from "./CustomPass";
 
-const Login = ({ show, handleClose, handleShowSignUp, validate, login }) => {
+const Login = ({ show, handleClose, handleShowSignUp, login }) => {
+  const navigate = useNavigate();
+
   const handleToggleModal = (evt) => {
     evt.preventDefault();
     handleClose();
     handleShowSignUp();
   };
 
-  const [userName, setUserName] = useState("");
-  const [password, setPassword] = useState("");
-
-  const navigate = useNavigate();
-
-  const handleLogin = () => {
-    const [userNameOk, passwordOk] = validate(userName, password);
-    if (userNameOk && passwordOk) {
-      login(userName);
-      setUserName("");
-      setPassword("");
+  const onSubmit = async (values, actions) => {
+    // const rs = await fetch('https://backend-proyecto3-cpzv4av54-admanser.vercel.app/users/register', {
+    const rs = await fetch('http://localhost:3001/users/login', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        name: values.name,
+        password: values.password
+      })
+    });
+    const response = await rs.json();
+    if (response.error) {
+      toast.error(response.message);
+    } else {
+      login(response.token);
+      toast.success(response.message);
+      actions.resetForm();
       handleClose();
-      navigate("/");
-      toast("bienvenido/a " + userName, { autoClose: 1000 });
-    } else if (!userNameOk || !passwordOk) {
-      toast("Datos ingresados incorrectos", { autoClose: 1000 });
+      navigate('/');
     }
-  };
-
-  const handleInputUserName = (evt) => {
-    setUserName(evt.target.value);
-  };
-  const handleInputPassword = (evt) => {
-    setPassword(evt.target.value);
   };
 
   return (
     <>
       <ToastContainer />
-      <Modal show={show} onHide={handleClose}>
-        <Modal.Header closeButton>
-          <Modal.Title>Iniciar sesión</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>
-          <Form>
-            <Form.Group className="mb-3" controlId="formBasicEmail">
-              <Form.Label>Usuario</Form.Label>
-              <Form.Control
-                type="text"
-                placeholder="Ingrese su usuario"
-                onInput={handleInputUserName}
-                value={userName}
-              />
-              <Form.Text className="text-muted">
-                Por favor ingrese su nombre de usuario correctamente.
-              </Form.Text>
-            </Form.Group>
-            <Form.Group className="mb-3" controlId="formBasicPassword">
-              <Form.Label>Contraseña</Form.Label>
-              <Form.Control
-                type="password"
-                placeholder="Ingrese su contraseña"
-                onInput={handleInputPassword}
-                value={password}
-              />
-            </Form.Group>
-            <Form.Text>
-              Olvidó su contraseña?{" "}
-              <Link to="/RecoveryPass" onClick={handleClose}>
-                Recuperar
-              </Link>
-            </Form.Text>
-            <br />
-            <Form.Text>
-              Todavia no tienes cuenta?
-              <a href={require("./Suscribite")} onClick={handleToggleModal}>
-                Registrate!
-              </a>
-            </Form.Text>
-          </Form>
-        </Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Cerrar
-          </Button>
-          <Button variant="primary" onClick={handleLogin}>
-            Ingresar
-          </Button>
-        </Modal.Footer>
-      </Modal>
+      <Formik
+        initialValues={{ name: "", password: "" }}
+        validationSchema={loginSchema}
+        onSubmit={onSubmit}
+      >
+        {({ isSubmitting, resetForm, handleSubmit }) => (
+          <>
+            <Modal show={show} onHide={handleClose}>
+              <Modal.Header closeButton>
+                <Modal.Title>Iniciar sesión</Modal.Title>
+              </Modal.Header>
+              <FormFormik onSubmit={handleSubmit}>
+                <Modal.Body>
+                  <CustomInput
+                    label="Usuario"
+                    name="name"
+                    type="text"
+                    placeholder="Bruno Díaz"
+                  />
+                  <CustomPass
+                    label="Contraseña"
+                    name="password"
+                    type="password"
+                    placeholder="Contraseña"
+                  />
+                  <Form.Text>
+                    Olvidó su contraseña?{" "}
+                    <Link to="/RecoveryPass" onClick={handleClose}>
+                      Recuperar
+                    </Link>
+                  </Form.Text>
+                  <br />
+                  <Form.Text>
+                    Todavia no tienes cuenta?
+                    <a href={require("./Suscribite")} onClick={handleToggleModal}>
+                      Registrate!
+                    </a>
+                  </Form.Text>
+                </Modal.Body>
+                <Modal.Footer>
+                  <Button variant="secondary" onClick={handleClose}>
+                    Cerrar
+                  </Button>
+                  <Button variant="primary" type="submit">
+                    Ingresar
+                  </Button>
+                </Modal.Footer>
+              </FormFormik>
+            </Modal>
+          </>
+        )}
+      </Formik>
     </>
   );
 };
