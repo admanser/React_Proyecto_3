@@ -72,8 +72,8 @@ const AboutUs = () => {
                 <div class="detalle">
                   <h3>Nicolas Guiggiolini</h3>
                   <p>
-                    El programador de signo cancer, con ascendente en
-                    capricornio y el mas gamer de todos.
+                    El programador gamer del grupo. El nerd del team, versatil y
+                    capaz de resolver cualquier error que se presente.
                   </p>
                 </div>
               </div>
