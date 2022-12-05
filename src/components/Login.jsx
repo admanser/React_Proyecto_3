@@ -18,8 +18,7 @@ const Login = ({ show, handleClose, handleShowSignUp, login }) => {
   };
 
   const onSubmit = async (values, actions) => {
-    // const rs = await fetch('https://backend-proyecto3-cpzv4av54-admanser.vercel.app/users/register', {
-    const rs = await fetch('http://localhost:3001/users/login', {
+    const rs = await fetch('https://backend-proyecto3-cpzv4av54-admanser.vercel.app/users/login', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

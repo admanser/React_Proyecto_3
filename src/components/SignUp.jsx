@@ -7,8 +7,7 @@ import CustomInput from "./CustomInput";
 import CustomPass from "./CustomPass";
 
 const onSubmit = async (values, actions) => {
-  // const rs = await fetch('https://backend-proyecto3-cpzv4av54-admanser.vercel.app/users/register', {
-  const rs = await fetch('http://localhost:3001/users/register', {
+  const rs = await fetch('https://backend-proyecto3-cpzv4av54-admanser.vercel.app/users/register', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
