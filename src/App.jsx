@@ -4,6 +4,7 @@ import { BrowserRouter } from "react-router-dom";
 import "./css/globals.css";
 import "../src/css/signup.css";
 import "../src/css/contact.css";
+import "../src/css/nosotros.css";
 import { useEffect, useState } from "react";
 //import { getDropdownMenuPlacement } from "react-bootstrap/esm/DropdownMenu";
 
@@ -18,9 +19,7 @@ function App() {
     role: "",
   });
 
-  useEffect(() => {
-
-  }, [auth]);
+  useEffect(() => {}, [auth]);
 
   const loggedIn = () => {
     return auth.user !== "";
@@ -65,7 +64,7 @@ function App() {
           logout={logout}
           loggedIn={loggedIn}
           loggedAdmin={loggedAdmin}
-          setAuth={setAuth}          
+          setAuth={setAuth}
         />
       </BrowserRouter>
     </>
