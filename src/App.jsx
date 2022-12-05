@@ -16,7 +16,7 @@ const USERS = [
 ];
 
 function App() {
-  const [token, setToken] = useState(null);
+  const [token, setToken] = useState(localStorage.getItem('token'));
 
   const loggedIn = () => {
     return token !== null;
@@ -37,10 +37,12 @@ function App() {
 
   const login = (newToken) => {
     setToken(newToken);
+    localStorage.setItem('token', newToken);
   };
 
   const logout = () => {
     setToken(null);
+    localStorage.removeItem('token');
   };
 
   return (
