@@ -39,6 +39,27 @@ body {
   color: black;
 }
 
+.containerError {
+  background-color: #fbfffe;
+  border-color: #fbfffe;
+  margin: 40px;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  background-size: auto auto;
+  padding-bottom: 40px;
+}
+
+.titleError {
+  color: #96031a;
+  font-weight: 550;
+}
+
+.img-error img {
+  width: 50%;
+}
+
 @media (max-width: 720px) {
   .width-col {
     display: block;
@@ -48,23 +69,6 @@ body {
 .navv {
   margin-top: 65px;
   background-color: blanchedalmond;
-}
-
-.containerError {
-  background-color: #fbfffe;
-  border-color: #fbfffe;
-  margin: 0%;
-  display: flex;
-  flex-flow: column;
-  justify-content: center;
-  align-items: center;
-  background-size: 100% auto;
-  padding-bottom: 40px;
-}
-
-.titleError {
-  color: #96031a;
-  font-weight: 550;
 }
 
 .foot {
