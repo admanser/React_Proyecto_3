@@ -34,14 +34,17 @@ const Footer = () => {
         <Col>
           <Row className="col-4 mt-3 mb-2 d-none d-md-block">
             <Row className="g-3">
-              <Link className="foot" href="">
-                link4
+              <Link className="foot" href="https://www.netflix.com/ar/">
+                Netflix
               </Link>
-              <Link className="foot" href="">
-                link5
+              <Link className="foot" href="https://www.disneyplus.com/es-ar">
+                Disney
               </Link>
-              <Link className="foot" href="">
-                link6
+              <Link
+                className="foot"
+                href="https://www.starplus.com/es-ar/welcome/stream-now"
+              >
+                Start +
               </Link>
             </Row>
           </Row>
