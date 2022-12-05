@@ -26,6 +26,10 @@ body {
   height: 150px;
 }
 
+.movie-video {
+  width: 80%;
+}
+
 .fondo-recovery {
   margin: 0;
   padding-top: 10%;

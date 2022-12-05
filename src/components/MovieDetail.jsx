@@ -5,16 +5,13 @@ import NextPremieres from "./NextPremieres";
 
 const MovieDetail = ({ data }) => {
   return (
-    <Container className="movie-detail">
+    <Container fluid className="movie-detail">
       <h2 className="mt-4">{data.name}</h2>
       <hr></hr>
       <Row>
-        <div className="width-col">
-          <Col className="d-flex justify-content-start">
-            <img src={data.image}></img>
-          </Col>
+        <div>
           <Col>
-            <div className="d-block justify-content-start mt-2">
+            <div className="d-block justify-content-center text-center mt-2">
               <p>
                 <b>Categoría</b>: {data.category}
               </p>
@@ -29,16 +26,22 @@ const MovieDetail = ({ data }) => {
               </p>
             </div>
           </Col>
-          <Col>
-            <Ratio aspectRatio="16x9">
+          <Col className="d-flex justify-content-center mb-3">
+            <img src={data.image} alt="video"></img>
+          </Col>
+          <Col className="d-flex justify-content-center">
+            <Ratio
+              aspectRatio="16x9"
+              className="movie-video d-flex justify-content-center"
+            >
               <embed type="image/svg+xml" src={data.trailer} />
             </Ratio>
           </Col>
         </div>
       </Row>
-      <h4 className="mt-5">Argumento</h4>
+      <h4 className="mt-5 text-center">Argumento</h4>
       <hr></hr>
-      <p className="mb-5">{data.story}</p>
+      <p className="mb-5 text-center">{data.story}</p>
       <hr />
       <NextPremieres />
     </Container>
