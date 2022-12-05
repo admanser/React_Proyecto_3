@@ -72,6 +72,10 @@ body {
   margin-bottom: 5%;
 }
 
+.movie-detail {
+  width: auto;
+}
+
 @media (max-width: 720px) {
   .width-col {
     display: block;
