@@ -66,10 +66,10 @@ const Navbar1 = ({
               </Button>
             ) : (
               <>
-                <Button className="mt-1 me-2 btn-nav text-dark" onClick={handleShowSignUp}>
+                <Button className="mt-1  btn-nav text-dark" onClick={handleShowSignUp}>
                   Registrarse
                 </Button>
-                <Button className="mt-1 me-2 btn-nav text-dark" onClick={handleShowLogin}>
+                <Button className="mt-1  btn-nav text-dark" onClick={handleShowLogin}>
                   Iniciar sesión
                 </Button>
               </>

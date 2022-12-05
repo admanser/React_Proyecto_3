@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Landing from "./Landing";
@@ -24,6 +24,8 @@ const Main = ({
   loggedAdmin,
   setAuth,
 }) => {
+  const [searchMovies, setSearchMovies] = useState('');
+
   return (
     <>
       <Navbar
@@ -35,10 +37,10 @@ const Main = ({
         loggedAdmin={loggedAdmin}
         setAuth={setAuth}
       />
-      <Navbar2 />
+      <Navbar2 searchMovies={searchMovies} setSearchMovies={setSearchMovies} />
       <div className="mt-0 d-flex flex-column min-vh-100">
         <Routes>
-          <Route path="/" element={<Landing />} />
+          <Route path="/" element={<Landing searchMovies={searchMovies} />}  />
           <Route path="/recoveryPass" element={<RecoveryPass />} />;
           <Route
             path="/Favorites"
