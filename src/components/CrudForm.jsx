@@ -10,8 +10,8 @@ const CrudForm = () => {
   const handleReset = (e) => {};
 
   return (
-    <>
-      <h3 className="text-center">Agregar nueva Película</h3>
+    <div className="crud">
+      <h2 className="text-center">AGREGAR NUEVA PELÍCULA</h2>
       <form onSubmit={handleSubmit} className="form-size mb-5">
         <input
           type="text"
@@ -20,6 +20,7 @@ const CrudForm = () => {
           onChange={handleChange}
           value={form.name}
         />
+        <br />
         <label for="cars">Seleccione Categoría:</label>
         <select name="category" id="category" value={form.category}>
           <option value="volvo">Comedias</option>
@@ -27,28 +28,38 @@ const CrudForm = () => {
           <option value="mercedes">Acción</option>
           <option value="audi">Ciencia Ficción</option>
         </select>
+        <br />
+        <br />
         <input
           type="text"
           name="url-image"
           placeholder="URL de la imagen de portada"
           value={form.image}
         />
+        <br />
+        <br />
         <input
           type="text"
           name="url-trailer"
           placeholder="URL del Trailer"
           value={form.trailer}
         />
+        <br />
+        <br />
         <textarea
           name="argument"
           for="argument"
           placeholder="Describe brevemente el argumento en menos de 300 carácteres"
           maxlength="300"
         ></textarea>
+        <br />
+        <br />
         <input type="submit" value="Enviar" />
+        <br />
+        <br />
         <input type="reset" value="Limpiar" onClick={handleReset} />
       </form>
-    </>
+    </div>
   );
 };
 
