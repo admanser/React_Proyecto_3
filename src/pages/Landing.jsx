@@ -6,12 +6,12 @@ import NextPremieres from "../components/NextPremieres";
 import Suscribite from "../components/Suscribite";
 // import CrudMovies from './CrudMovies';
 
-const Landing = () => {
+const Landing = ({ searchMovies }) => {
   return (
     <>
       <Hero />
       <Suscribite/>
-      <ListMoviesContainer publicity/>
+      <ListMoviesContainer searchMovies={searchMovies} />
       <Advertising />
       <Category />
       <NextPremieres />
