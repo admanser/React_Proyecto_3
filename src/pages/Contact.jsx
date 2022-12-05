@@ -58,7 +58,7 @@ const Contact = () => {
           }}
         >
           {({ errors }) => (
-            <Form action="" className="form2">
+            <Form action="" className="form2 mt-5">
               <div>
                 <label className="form-label" htmlFor="nombre">
                   Nombre
