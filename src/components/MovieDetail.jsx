@@ -29,12 +29,14 @@ const MovieDetail = ({ data }) => {
               </p>
             </div>
           </Col>
-          <Col>
-            <Ratio aspectRatio="16x9">
-              <embed type="image/svg+xml" src={data.trailer} />
-            </Ratio>
-          </Col>
         </div>
+      </Row>
+      <Row>
+        <Col className="mt-5">
+          <Ratio aspectRatio="16x9">
+            <embed type="image/svg+xml" src={data.trailer} />
+          </Ratio>
+        </Col>
       </Row>
       <h4 className="mt-5">Argumento</h4>
       <hr></hr>
