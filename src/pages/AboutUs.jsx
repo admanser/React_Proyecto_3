@@ -1,4 +1,5 @@
 import React from "react";
+import Fer from "../img/fer.jpg";
 import Checho from "../img/checho.jpg";
 import Nico from "../img/nicolasg.png";
 import Dani from "../img/daniela.png";
@@ -9,7 +10,6 @@ const AboutUs = () => {
       <div class="Acercadenosotros">
         <h2>ACERCA DE NOSOTROS</h2>
         <br />
-        <h4></h4>
       </div>
 
       {/* <!--inicio de fotos integrantes--> */}
@@ -19,7 +19,7 @@ const AboutUs = () => {
           <div class="row text-center d-flex">
             <div class="col d-flex justify-content-center">
               <div class="contenedor transform-img">
-                <img src={Dani} alt="Facu" />
+                <img src={Fer} alt="Facu" />
                 <div class="detalle">
                   <h3>
                     Fernanda <br />
