@@ -26,6 +26,19 @@ body {
   height: 150px;
 }
 
+.fondo-recovery {
+  margin: 0;
+  padding-top: 10%;
+  padding-bottom: 15%;
+  background-image: url(../img/fondo.jpeg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.title-pass {
+  color: black;
+}
+
 @media (max-width: 720px) {
   .width-col {
     display: block;

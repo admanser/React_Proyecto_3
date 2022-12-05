@@ -10,43 +10,45 @@ const onSubmit = async (values, actions) => {
 
 const RecoveryPass = () => {
   return (
-    <Formik
-      initialValues={{ username: "", email: "" }}
-      validationSchema={recoverySchema}
-      onSubmit={onSubmit}
-    >
-      {({ isSubmitting, resetForm }) => (
-        <Form>
-          <h2>Recuperar Contraseña</h2>
-          <CustomInput
-            label="Username"
-            name="username"
-            type="text"
-            placeholder="Bruno Díaz"
-          />
-          <CustomEmail
-            label="Email"
-            name="email"
-            type="text"
-            placeholder="mail@mail.com"
-          />
-          <div direction="horizontal" gap={3}>
-            <button
-              id="btncancel"
-              type="reset"
-              variant="secondary"
-              onClick={resetForm}
-            >
-              Cancelar
-            </button>
+    <div className="fondo-recovery">
+      <Formik
+        initialValues={{ username: "", email: "" }}
+        validationSchema={recoverySchema}
+        onSubmit={onSubmit}
+      >
+        {({ isSubmitting, resetForm }) => (
+          <Form className="form-pass">
+            <h2 className="title-pass">Recuperar Contraseña</h2>
+            <CustomInput
+              label="Username"
+              name="username"
+              type="text"
+              placeholder="Bruno Díaz"
+            />
+            <CustomEmail
+              label="Email"
+              name="email"
+              type="text"
+              placeholder="mail@mail.com"
+            />
+            <div direction="horizontal" gap={3}>
+              <button
+                id="btncancel"
+                type="reset"
+                variant="secondary"
+                onClick={resetForm}
+              >
+                Cancelar
+              </button>
 
-            <button id="btnsubmit" disabled={isSubmitting} type="submit">
-              Submit
-            </button>
-          </div>
-        </Form>
-      )}
-    </Formik>
+              <button id="btnsubmit" disabled={isSubmitting} type="submit">
+                Submit
+              </button>
+            </div>
+          </Form>
+        )}
+      </Formik>
+    </div>
   );
 };
 export default RecoveryPass;
